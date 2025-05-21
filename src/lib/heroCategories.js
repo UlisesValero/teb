@@ -1,0 +1,1 @@
+export const heroCategories = ["Inicio", "Quienes somos", "Servicios", "Contactanos"]
