@@ -1,35 +1,102 @@
-
-const formContent = [
-    { label:"Nombre", type: "text", htmlFor: "name", name: "name", id: "name" },
-    { label:"Correo electrónico", type: "email", htmlFor: "email", name: "email", id: "email" },
-    { label:"Teléfono", type: "tel", htmlFor: "phone", name: "phone", id: "phone" },
-    { label:"Dejanos tu mensaje", type: "", htmlFor: "message", name: "message", id: "message" }
-]
-
+import FormEmail from '../../lib/FormEmail'
+import useFormInput from "../../hooks/useFormInput"
+import { useRef } from 'react'
+import Toastify from 'toastify-js'
 
 const FormInput = () => {
+    const { formData, setFormData, formContent } = useFormInput()
+    const Form = useRef()
+    const emailClient = new FormEmail()
+
+    const handleChange = (e) => {
+        setFormData((prev) => ({
+            ...prev,
+            [e.target.name]: e.target.value,
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        try {
+            await emailClient.send(formData)
+            Toastify({
+                text: "This is a toast",
+                duration: 3000,
+                close: true,
+                gravity: "top",
+                position: "left",
+                stopOnFocus: true,
+                style: {
+                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                },
+            }).showToast();
+            setFormData({
+                fullName: "",
+                email: "",
+                phone: "",
+                message: "",
+            });
+        }
+        catch (error) {
+            Toastify({
+                text: "Ocurrió un error, intentalo de nuevo",
+                duration: 3000,
+                close: true,
+                gravity: "top",
+                position: "left",
+                stopOnFocus: true,
+                style: {
+                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                },
+            }).showToast();
+        }
+    }
+
     return (
-        <div className="w-100 h-100 pt-50 ">
-            {formContent.map((form, index) => (
-                <form key={index} className="flex flex-col" action="submit">
+        <form ref={Form} onSubmit={handleSubmit} className='flex flex-col gap-2 items-center justify-center pt-20'>
+            {formContent.map((input) => (
+                <div key={input.id} className="relative ">
+                    {input.type === "textarea" ?
+                        (
+                            <textarea
+                                className="peer w-full border border-gold bg-lgray/60 text-black font-semibold text-sm 
+                                rounded pt-7 pb-2 px-3 focus:outline-none"
+                                value={input.formData}
+                                type={input.type}
+                                name={input.name}
+                                htmlFor={input.htmlFor}
+                                onChange={handleChange}
+                                placeholder=" "
+                                rows={6}
+                                required
+                            />
+                        )
+                        :
+                        (
+                            <input
+                                className="peer w-full border border-gold bg-lgray/60 text-black font-semibold text-sm 
+                                rounded pt-7 pb-2 px-3 focus:outline-none"
+                                value={input.formData}
+                                type={input.type}
+                                name={input.name}
+                                htmlFor={input.htmlFor}
+                                onChange={handleChange}
+                                placeholder=" "
+                                required
+                            />
+                        )
+                    }
                     <label
-                    className="pointer-events-none absolute left-3 top-2 transition-all 
-                  peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-dgray 
-                  peer-focus:top-0 peer-focus:text-sm peer-focus:text-lblue" 
-                    htmlFor={form.htmlFor} 
+                        className="pointer-events-none absolute left-3 top-2 text-gray-400 text-sm transition-all  
+                         peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-dgray
+                         peer-focus:top-0 peer-focus:text-sm peer-focus:text-lblue"
+                        htmlFor={input.htmlFor}
                     >
-                        {form.label}
+                        {input.label}
                     </label>
-                    <input
-                    className="border"
-                    type={form.type} 
-                    id={form.id}
-                    name={form.name}
-                    required
-                    />
-                </form>
+                </div>
             ))}
-        </div>
+        </form>
     )
 }
 
