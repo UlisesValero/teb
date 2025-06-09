@@ -13,3 +13,6 @@
     --font-p: "";
 }
 
+.text-stroke-white {
+  -webkit-text-stroke: 1px white;
+}
