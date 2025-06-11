@@ -1,18 +1,26 @@
-// import Cards from "./components/ui/Cards";
 import Hero from "./components/pages/Hero";
-import Welcome from "./components/pages/Welcome";
-// import Services from './components/pages/Services'
-// import FormInput from "./components/ui/FormInput";
+import { Routes, Route } from 'react-router-dom'
+import Services from './components/pages/Services'
+import Contact from './components/pages/Contact'
+import ServiceDetail from "./components/pages/ServiceDetail";
 
 const App = () => {
     return (
-        <>
-        <Hero/>
-        {/* <Cards /> */}
-        {/* <Services /> */}
-        {/* <FormInput /> */}
-        <Welcome />
-                </>
+    <>
+      <Hero />
+
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Services />
+            <Contact />
+          </>
+        } />
+
+        <Route path="/servicio/:id" element={<ServiceDetail />} />
+      </Routes>
+    </>
+
     )
 }
 
