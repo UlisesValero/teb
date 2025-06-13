@@ -13,12 +13,12 @@ const Services = () => {
             {servicesList.map(service => (
                 <div
                     key={service.key}
-                    className="relative group rounded-xl overflow-hidden shadow-lg cursor-pointer"
+                    className="relative group overflow-hidden shadow-lg shadow-gray-400 hover:shadow-dblue cursor-pointer"
                 >
                     <img
                         src={service.img}
                         alt={service.alt}
-                        className="w-[18rem] object-cover transition-transform duration-300 group-hover:scale-110"
+                        className="w-[18rem] h-[22rem] object-cover transition-transform duration-300 group-hover:scale-110"
                     />
 
                     <div className="flex items-center pb-6 justify-center absolute inset-0 bg-black/30 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-600">
@@ -29,7 +29,7 @@ const Services = () => {
                     </div>
 
                     <div className="flex justify-center absolute bottom-0 left-0 w-full bg-white bg-opacity-80 py-2">
-                        <h2 className="">{service.name}</h2>
+                        <h2 className="text-xl font-semibold">{service.name}</h2>
                     </div>
                 </div>
             ))}

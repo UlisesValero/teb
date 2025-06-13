@@ -1,19 +1,29 @@
 import Hero from "./components/pages/Hero";
 import { Routes, Route } from 'react-router-dom'
-import Services from './components/pages/Services'
-import Contact from './components/pages/Contact'
+// import Services from './components/pages/Services'
+// import Contact from './components/pages/Contact'
 import ServiceDetail from "./components/pages/ServiceDetail";
+import Welcome from "./components/pages/Welcome";
+// import Cards from "./components/ui/Cards";
+// import Welcome from './components/pages/Welcome'
 
 const App = () => {
-    return (
+  return (
     <>
-      <Hero />
+      <div className="h-[85dvh] bg-[url(/assets/mainbg.jpg)] bg-cover bg-center flex justify-center">
+        <div className="w-[70%] md:w-[80%]">
+          <Hero />
+          <Welcome />
+        </div>
+      </div>
 
       <Routes>
         <Route path="/" element={
           <>
-            <Services />
-            <Contact />
+            {/* <Welcome /> */}
+            {/* <Services /> */}
+            {/* <Contact /> */}
+            {/* <Cards /> */}
           </>
         } />
 
@@ -21,7 +31,7 @@ const App = () => {
       </Routes>
     </>
 
-    )
+  )
 }
 
 export default App
