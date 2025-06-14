@@ -13,7 +13,7 @@ const cardsContent = [
 const Cards = () => {
     return (
        <section className="w-full bg-gradient-to-b from-dblue to-dblue2 h-fit pb-60">
-        <h1 className="flex justify-center text-3xl lg:text-4xl font-bold text-white pt-10 lg:py-20">
+        <h1 className="flex justify-center text-3xl lg:text-7xl font-bold text-white pt-10  font-p">
         ¿Por que elegirnos?
         </h1>
             <div className="flex flex-wrap justify-center gap-10 lg:gap-20 pt-30">

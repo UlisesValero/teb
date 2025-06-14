@@ -4,7 +4,8 @@ import { Routes, Route } from 'react-router-dom'
 // import Contact from './components/pages/Contact'
 import ServiceDetail from "./components/pages/ServiceDetail";
 import Welcome from "./components/pages/Welcome";
-// import Cards from "./components/ui/Cards";
+import Cards from "./components/ui/Cards";
+import Buses from "./components/pages/Buses";
 // import Welcome from './components/pages/Welcome'
 
 const App = () => {
@@ -20,10 +21,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={
           <>
-            {/* <Welcome /> */}
             {/* <Services /> */}
             {/* <Contact /> */}
-            {/* <Cards /> */}
+            <Cards />
+            <Buses />
           </>
         } />
 
