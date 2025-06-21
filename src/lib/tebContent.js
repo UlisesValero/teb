@@ -42,25 +42,26 @@ export const serviceDetail = [
 ]
 
 export const busesDetail = [
-    { busType: "Mini Van", description:"Van con capacidad para 10 pasajeros", img:"/assets/Van.png", key:"1"},
-    { busType: "Kombiwagen", description:"Combi con capacidad para 19 pasajeros", img:"/assets/Combie.png", key:"2"},
-    { busType: "Bus", description:"Bus Semi-Cama climatizado + baño. Con capacidad desde 42 a 45 pasajeros", img:"/assets/Bus42p.png", key:"3"},
-    { busType: "Bus", description:"Bus Semi-Cama con capacidad para 60 personas", img:"/assets/Bus60psemi.png", key:"4"},
-    { busType: "Bus", description:"Bus Cama con capacidad para 60 personas", img:"/assets/Bus60pcama.png", key:"5"}
+    { busType: "Mini Van", description: "Van con capacidad para 10 pasajeros", img: "/assets/Van.png", key: "1" },
+    { busType: "Kombiwagen", description: "Combi con capacidad para 19 pasajeros", img: "/assets/Combie.png", key: "2" },
+    { busType: "Bus", description: "Bus Semi-Cama climatizado + baño. Con capacidad desde 42 a 45 pasajeros", img: "/assets/Bus42p.png", key: "3" },
+    { busType: "Bus", description: "Bus Semi-Cama con capacidad para 60 personas", img: "/assets/Bus60psemi.png", key: "4" },
+    { busType: "Bus", description: "Bus Cama con capacidad para 60 personas", img: "/assets/Bus60pcama.png", key: "5" }
 ]
 
 export const contactContent = [
-    { icon:"", title:"", description:""},
-    { icon:"", title:"", description:""},
-    { icon:"", title:"", description:""},
-    { icon:"", title:"", description:""}
+    { icon: "", title: "", description: "" },
+    { icon: "", title: "", description: "" },
+    { icon: "", title: "", description: "" },
+    { icon: "", title: "", description: "" }
 ]
 
 export const heroCategories = [
-    {category: "Servicios", route:"servicios", key:"1"},
-    {category: "Nosotros", route:"nosotros", key:"2"},
-    {category: "Contacto", route:"contacto", key:"3"},
-    {category: "Reta Tur", route:"", key:"4"}
+    { category: "Inicio", route: "inicio", key: "1" },
+    { category: "Servicios", route: "servicios", key: "2" },
+    { category: "Nosotros", route: "nosotros", key: "3" },
+    { category: "Contacto", route: "contacto", key: "4" },
+    { category: "Reta Tur", route: "", key: "5" }
 ]
 
 // export const images = [

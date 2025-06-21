@@ -8,6 +8,8 @@ import Cards from "./components/ui/Cards";
 import Buses from "./components/pages/Buses";
 import Footer from "./components/pages/Footer";
 import { useDarkBg } from "./context/DarkBg";
+    import { AnimatePresence, motion } from "framer-motion"
+
 
 
 
@@ -16,7 +18,7 @@ const App = () => {
   return (
     <>
       <div className="h-[85dvh] bg-[url(/assets/mainbg.jpg)] bg-cover bg-center flex justify-center">
-       <div className="w-[70%] md:w-[80%] z-40">
+       <div className="w-[80%] lg:w-[75%] z-40">
           <Hero darken={darken} setDarken={setDarken}/>
           <Welcome />
         </div>
@@ -35,11 +37,19 @@ const App = () => {
 
         <Route path="/servicio/:id" element={<ServiceDetail />} />
       </Routes>
-    {darken && (
-    <div
-      className="fixed inset-0 bg-black/40 bg-opacity-50 pointer-events-none z-20 duration-400"
+
+<AnimatePresence>
+  {darken && (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 0.8 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.7 }}
+      className="fixed inset-0 bg-[#000000]/70 pointer-events-none z-20"
     />
   )}
+</AnimatePresence>
+
 </>
   )
 }

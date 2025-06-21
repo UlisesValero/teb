@@ -30,7 +30,7 @@ const Hero = () => {
                         <Burger />
                     </div>
                     {heroCategories.map((category, index) => (
-                        category.category === "Servicios" ? (
+                        category.category === "Servicios" && "Inicio" ? (
                             <div
                                 key={index}
                                 className="relative hidden md:flex md:h-full"
@@ -43,7 +43,7 @@ const Hero = () => {
                                     setDarken(false)
                                 }}
                             >
-                                <h1 className="text-gray-300 text-xs md:text-xl lg:text-2xl hover:text-gold cursor-pointer flex items-center md:h-full">
+                                <h1 className="text-gray-300 text-xs md:text-lg lg:text-2xl hover:text-gold cursor-pointer flex items-center md:h-full">
                                     {category.category}
                                     <MdArrowRight
                                         className={`pl-1  transition-transform duration-300 ${open ? "rotate-90" : "rotate-0"}`}
@@ -62,7 +62,7 @@ const Hero = () => {
                                             to={`/servicio/${service.id}`}
                                         >
                                             {service.name}
-                                            <BsArrowUpRight className="opacity-0 group-hover:opacity-100 group-hover:rotate-45 transform  transition-all duration-500" />
+                                            <BsArrowUpRight className="opacity-0 group-hover:opacity-100 group-hover:rotate-45 transform  transition-all duration-800" />
                                         </Link>
                                     ))}
                                 </div>
@@ -70,7 +70,7 @@ const Hero = () => {
                         ) : (
                             <Link 
                             key={index} 
-                            className="text-gray-300 hover:text-gold hover:scale-105 transition-all duration-300 text-xs md:text-xl lg:text-2xl hidden md:flex md:items-center md:h-full" to={category.route}>
+                            className="text-gray-300 hover:text-gold hover:scale-105 transition-all duration-300 text-xs md:text-lg lg:text-2xl hidden md:flex md:items-center md:h-full" to={category.route}>
                                 {category.category}
                             </Link>
                         )
