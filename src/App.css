@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+    --color-lblue: #00B4F0;
+    --color-dblue: #040c32;
+    --color-dblue2: #081761;
+    --color-lgray: #ecf0f1;
+    --color-white: #fafafa;
+    --color-black: #2c2c2c;
+    --color-dgrey: #4A4A4A;
+    --color-gold: #D4AF37;
+    --font-h1: "";
+    --font-h3: "Merriweather", serif;
+    --font-p: "Source Serif 4", serif;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 1px white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
