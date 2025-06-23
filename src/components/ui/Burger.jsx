@@ -37,7 +37,7 @@ const Burger = () => {
                                             key={categories.key}
                                             onClick={() => setOpenService(prev => !prev)}
                                         >
-                                            <h1 className="text-dblue text-md hover:text-lblue/80 font-semibold text-4xl flex items-center">
+                                            <h1 className="text-dblue text-md font-h1 font-semibold text-4xl flex items-center">
                                                 {categories.category}
                                                 <MdArrowRight
                                                     className={`pl-1 transition-transform duration-300 ${openService ? "rotate-90" : "rotate-0"}`}
@@ -64,7 +64,7 @@ const Burger = () => {
                                             className="border-b border-gray-300 pb-2"
                                             key={categories.key}
                                         >
-                                            <h1 className="text-4xl font-semibold">
+                                            <h1 className="text-4xl font-h1 font-semibold">
                                                 {categories.category}
                                             </h1>
                                         </div>

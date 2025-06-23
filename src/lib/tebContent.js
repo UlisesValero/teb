@@ -1,38 +1,38 @@
 export const servicesList = [
-    {
-        name: "Traslado de personal",
-        img: "/assets/retatur.jpg",
-        alt: "Imagen del micro utilizado para traslado de personal",
-        text: "",
-        id: "traslado",
-        key: "1"
-    },
-    {
-        name:
-            "Educativo",
-        img: "/assets/retatur.jpg",
-        alt: "Imagen del micro utilizado con fines educativos",
-        text: "",
-        id: "educativo",
-        key: "2"
-    },
-    {
-        name: "Turistico",
-        img: "/assets/retatur.jpg",
-        alt: "Imagen del micro utilizado con fines turisticos",
-        text: "",
-        id: "turistico",
-        key: "3"
-    },
-    {
-        name: "Tripulaciones",
-        img: "/assets/retatur.jpg",
-        alt: "Imagen del micro utilizado para tripulaciones",
-        text: "",
-        id: "tripulacion",
-        key: "4"
-    }
+  {
+    name: "Traslado de personal",
+    img: "/assets/retatur.jpg",
+    alt: "Imagen del micro utilizado para traslado de personal",
+    text: "Soluciones eficientes para el transporte diario de empleados.",
+    id: "traslado",
+    key: "1"
+  },
+  {
+    name: "Educativo",
+    img: "/assets/retatur.jpg",
+    alt: "Imagen del micro utilizado con fines educativos",
+    text: "Transporte seguro y puntual para instituciones educativas.",
+    id: "educativo",
+    key: "2"
+  },
+  {
+    name: "Turístico",
+    img: "/assets/retatur.jpg",
+    alt: "Imagen del micro utilizado con fines turísticos",
+    text: "Viajes cómodos y organizados para recorridos turísticos.",
+    id: "turistico",
+    key: "3"
+  },
+  {
+    name: "Tripulaciones",
+    img: "/assets/retatur.jpg",
+    alt: "Imagen del micro utilizado para tripulaciones",
+    text: "Logística especializada para el traslado de tripulaciones.",
+    id: "tripulacion",
+    key: "4"
+  }
 ]
+
 
 export const serviceDetail = [
     { title: "", description: "" },
@@ -57,7 +57,7 @@ export const contactContent = [
 ]
 
 export const heroCategories = [
-    { category: "Inicio", route: "inicio", key: "1" },
+    { category: "Inicio", route: "/", key: "1" },
     { category: "Servicios", route: "servicios", key: "2" },
     { category: "Nosotros", route: "nosotros", key: "3" },
     { category: "Contacto", route: "contacto", key: "4" },
