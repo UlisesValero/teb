@@ -19,7 +19,7 @@ const Hero = () => {
         <header className="w-full z-40 pt-10">
             <section
                 className={`h-15 border-b border-gray-400
-            ${scrollY > 500 ? "h-17 bg-dblue border-none fixed left-0 top-0 w-full z-40 transition-all duration-400" : null}`}
+            ${scrollY > 500 ? "h-17 bg-dblue/80 border-none fixed left-0 top-0 w-full z-40 transition-all duration-400" : null}`}
             >
                 <div className="flex flex-row justify-evenly items-center gap-7 h-full">
                     <Link to={'/'} className="">
@@ -43,7 +43,7 @@ const Hero = () => {
                                     setDarken(false)
                                 }}
                             >
-                                <h1 className="font-h1 font-semibold text-gray-300 text-xs md:text-lg lg:text-2xl hover:text-gold hover:underline cursor-pointer flex items-center md:h-full">
+                                <h1 className="font-h1 text-gray-200 text-xs md:text-lg lg:text-2xl hover:text-gold hover:underline cursor-pointer flex items-center md:h-full">
                                     {category.category}
                                     <MdArrowRight
                                         className={`pl-1  transition-transform duration-300 ${open ? "rotate-90" : "rotate-0"}`}
@@ -70,7 +70,7 @@ const Hero = () => {
                         ) : (
                             <Link
                             key={index} 
-                            className="font-h1 font-semibold text-gray-300 hover:text-gold hover:underline hover:scale-105 transition-all duration-300 text-xs md:text-lg lg:text-2xl hidden md:flex md:items-center md:h-full" to={category.route}>
+                            className="font-h1 text-gray-200 hover:text-gold hover:underline hover:scale-105 transition-all duration-300 text-xs md:text-lg lg:text-2xl hidden md:flex md:items-center md:h-full" to={category.route}>
                                 {category.category}
                             </Link>
                         )

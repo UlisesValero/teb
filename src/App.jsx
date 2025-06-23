@@ -1,5 +1,4 @@
 import Hero from "./components/pages/Hero";
-import { Routes, Route } from 'react-router-dom'
 import Services from './components/pages/Services'
 import Contact from './components/pages/Contact'
 import ServiceDetail from "./components/pages/ServiceDetail";
@@ -8,9 +7,8 @@ import Cards from "./components/ui/Cards";
 import Buses from "./components/pages/Buses";
 import Footer from "./components/pages/Footer";
 import { useDarkBg } from "./context/DarkBg";
-    import { AnimatePresence, motion } from "framer-motion"
-
-
+import { AnimatePresence, motion } from "framer-motion"
+import { Routes, Route } from 'react-router-dom'
 
 
 const App = () => {
