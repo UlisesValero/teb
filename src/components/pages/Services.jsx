@@ -32,7 +32,7 @@ const Services = () => {
                                 />
                             </div>
 
-                            <div className={`md:w-1/3 p-8 ${impar ? "rounded-l-2xl" : "rounded-r-2xl"}  bg-dblue backdrop-blur-md flex flex-col justify-center text-left space-y-3`}>
+                            <div className={`md:w-1/3 p-8 ${impar ? "rounded-b-2xl md:rounded-br-none md:rounded-l-2xl" : "rounded-b-2xl md:rounded-bl-none md:rounded-r-2xl"}  bg-dblue backdrop-blur-md flex flex-col justify-center text-left space-y-3`}>
                                 
                                 <h1 className="text-4xl font-h1">{service.name}</h1>
                                 <p className="text-gray-300/80 font-p text-xl">{service.text}</p>

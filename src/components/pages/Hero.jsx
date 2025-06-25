@@ -19,7 +19,7 @@ const Hero = () => {
         <header className="w-full z-40 pt-10">
             <section
                 className={`h-15 border-b border-gray-400
-            ${scrollY > 500 ? "h-17 bg-dblue/80 border-none fixed left-0 top-0 w-full z-40 transition-all duration-400" : null}`}
+            ${scrollY > 500 ? "h-17 bg-dblue/90 border-none fixed left-0 top-0 w-full z-40 transition-all duration-400" : null}`}
             >
                 <div className="flex flex-row justify-evenly items-center gap-7 h-full">
                     <Link to={'/'} className="">
