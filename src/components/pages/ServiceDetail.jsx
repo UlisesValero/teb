@@ -14,10 +14,10 @@ const ServiceDetail = () => {
     );
 
   return (
-    <section className="min-h-screen bg-gray-100 py-20 flex flex-col items-center">
+    <section className="min-h-screen py-20 flex flex-col items-center">
       
       <div className="relative w-[90%] md:w-[80%] lg:w-[65%] bg-dblue rounded-3xl shadow-lg">
-        <div className="flex lg:flex-row flex-wrap lg:items-center justify-end lg:h-[40rem] relative">
+        <div className="flex lg:flex-row flex-wrap lg:items-center justify-end lg:h-[45rem] relative">
 
           <div className="lg:absolute lg:-left-[7%] z-10 lg:w-1/2">
             <img
@@ -52,7 +52,7 @@ const ServiceDetail = () => {
 
       <div className="mt-10">
         <Button
-          onClick={() => navigate("/#servicio")}
+          onClick={() => navigate("/")}
           className="px-6 py-3 bg-gray-300 hover:bg-gray-400 text-black rounded-xl transition"
         >
           Volver a servicios

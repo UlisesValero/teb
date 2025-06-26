@@ -22,7 +22,6 @@ const Services = () => {
                     impar ? "md:flex-row-reverse" : ""
                   } overflow-hidden cursor-pointer border border-white/10 rounded-2xl hover:scale-[1.01] transition-all duration-300`}
                 >
-                  {/* Imagen */}
                   <div className="md:w-1/2 h-64 md:h-[22rem] relative">
                     <img
                       src={service.img}
@@ -31,7 +30,6 @@ const Services = () => {
                     />
                   </div>
 
-                  {/* Contenido */}
                   <div
                     className={`md:w-1/3 p-8 ${
                       impar
@@ -51,12 +49,12 @@ const Services = () => {
                   </div>
                 </div>
               </a>
-            );
+            )
           })}
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services
