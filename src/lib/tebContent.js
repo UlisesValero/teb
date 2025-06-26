@@ -7,6 +7,7 @@ export const servicesList = [
     id: "empresarial",
     key: "1",
     title:"Servicio de Traslado Empresarial",
+    subTitle:"Soluciones de transporte empresarial seguras, puntuales y cómodas",
     description:"Trasladamos personal de empresas a sus lugares de trabajo o eventos corporativos de forma segura y eficiente. Nuestro servicio se adapta a los horarios y necesidades de cada empresa, brindando una experiencia cómoda, puntual y profesional."
   },
   {
@@ -17,6 +18,7 @@ export const servicesList = [
     id: "educativo",
     key: "2",
     title:"Servicio de Traslado Educativo",
+    subTitle:"",
     description:"Ideal para instituciones educativas, ofrecemos el transporte seguro y organizado de estudiantes, docentes o personal administrativo. Cumplimos con los estándares de seguridad y confort para asegurar un viaje confiable."
   },
   {
@@ -51,6 +53,10 @@ export const servicesList = [
   }
 ]
 
+export const servicesFeatures = {
+  features: [ "Puntualidad garantizada en cada viaje", "Choferes profesionales con capacitación constante", "Monitoreo GPS en tiempo real", "Vehículos habilitados y sanitizados", "Atención personalizada 24/7", "Flexibilidad en horarios y rutas según necesidad",],
+  image: "/assets/mainbg.jpg"
+}
 
 export const busesDetail = [
     { busType: "Mini Van", description: "Van con capacidad para 10 pasajeros", img: "/assets/Van.png", key: "1" },
