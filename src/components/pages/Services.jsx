@@ -1,5 +1,5 @@
-import { BsArrowUpRight } from "react-icons/bs";
-import { servicesList } from "../../lib/tebContent";
+import { BsArrowUpRight } from "react-icons/bs"
+import { servicesList } from "../../lib/tebContent"
 
 const Services = () => {
   return (
@@ -7,7 +7,7 @@ const Services = () => {
       <div className="relative z-10 flex flex-col items-center text-white space-y-16">
         <div className="flex flex-col gap-12 md:w-[90%] lg:w-[80%]">
           {servicesList.map((service, index) => {
-            const impar = index % 2 !== 0;
+            const impar = index % 2 !== 0
 
             return (
               <a

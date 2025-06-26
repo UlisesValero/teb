@@ -21,7 +21,7 @@ const Hero = () => {
             <header className="w-full z-[60] relative pt-10">
                 <section
                     className={`h-15 border-b border-gray-400
-                ${scrollY > 50 || location.pathname !== "/" ?  "h-20 bg-dblue/90 border-none fixed left-0 top-0 w-full z-40 transition-all duration-400" : ""}`}
+                ${scrollY > 50 || location.pathname !== "/" ?  "h-20 bg-dblue border-none fixed left-0 top-0 w-full z-40 transition-all duration-400" : ""}`}
                 >
                     <div className="flex flex-row justify-evenly items-center w-full gap-7 h-full">
                         <Link to={'/'} className="">
