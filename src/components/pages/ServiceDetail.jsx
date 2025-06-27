@@ -4,6 +4,9 @@ import Button from "../ui/Button";
 import { TbMailForward } from "react-icons/tb";
 import ArgentinaMap from "./ArgentinaMap";
 import CorporativeT from "../ui/CorporativeT";
+import Receptive from "../ui/Receptive";
+import ServicesRedirect from "../ui/ServicesRedirect";
+import Educational from "../ui/Educational";
 
 const ServiceDetail = () => {
   const { id } = useParams();
@@ -16,7 +19,7 @@ const ServiceDetail = () => {
     );
 
   return (
-    <>
+    <section className="bg-white">
 
     {/* COLOCAR IMAGENES DESDE tebContent con la respectiva imagen de cada servicio */}
 <div
@@ -27,57 +30,41 @@ const ServiceDetail = () => {
   </div>
 </div>
 
-    {servicio.id === "nacional" ? (<ArgentinaMap/>) : null}
+    {servicio.id === "nacional" ? ( 
+      <div className="flex flex-col md:flex-row">
+      <div className="w-[65%]">
+          <ArgentinaMap/>
+      </div>
+      <div className="w-[35%]">
+          <ServicesRedirect/>
+      </div>
+      </div>
+    ) : null}
     {servicio.id === "empresarial" ? (<CorporativeT/>) : null}
+    {servicio.id === "turistico" ? (
+      <div className="flex flex-col md:flex-row">
+      <div className="w-[70%]">
+          <Receptive/>
+      </div>
+      <div className="w-[30%]">
+          <ServicesRedirect/>
+      </div>
+      </div>
+    ) : null}
+    {servicio.id === "educativo" ? (
+      <div className="w-full flex flex-col md:flex-row">
+        <div className="w-[70%]">
+        <Educational/>
+        </div>
+        <div className="w-[30%]">
+          <ServicesRedirect/>
+        </div>
 
+      </div>
+    ) : null}
 
-    </>
+    </section>
   )
 }
 
 export default ServiceDetail;
-
-    // <section className="py-10 md:py-20 flex flex-col items-center">
-    //   <div className="relative w-[90%] md:w-[80%] lg:w-[75%] rounded-3xl shadow-lg md:px-10">
-    //     <div className="flex flex-col lg:flex-row gap-10 lg:items-center justify-end lg:h-[45rem] relative">
-
-    //       <div className="z-10 lg:w-1/2">
-    //         <img
-    //           src={servicio.img}
-    //           alt={servicio.alt}
-    //           className="w-full lg:h-130 px-5 lg:px-0 py-5"
-    //         />
-    //       </div>
-
-    //       <div className="w-full lg:w-1/2 flex flex-col items-center gap-5 lg:gap-8">
-    //           <h1 className="text-2xl lg:text-4xl font-h1 text-gold/90 text-center">{servicio.subTitle}</h1>
-    //         <p className="text-md lg:text-lg font-p text-gray-400 leading-relaxed px-3 text-center md:px-10 lg:px-0">
-    //           {servicio.description}
-    //         </p>              
-    //     <Button 
-    //     className="py-2 px-3 md:py-4 md:px-6 text-xl font-p hover:text-gold/80 w-fit border border-white hover:border-gold"
-    //     onClick={() => navigate("/contacto")}
-    //       >
-    //       <span className=" transition-opacity duration-400 ease-in-out group-hover:opacity-0">
-    //         Contáctenos
-    //       </span>
-
-    //       <TbMailForward
-    //         className="absolute inset-0 m-auto opacity-0 transition-opacity duration-400 ease-in-out group-hover:opacity-100"
-    //         size={24}
-    //       />
-
-    //     </Button>
-    //       </div>
-    //     </div>
-    //   </div>
-
-    //   <div className="mt-10">
-    //     <Button
-    //       onClick={() => navigate("/")}
-    //       className="px-6 py-3 bg-gray-300 hover:bg-gray-400 text-black rounded-xl transition"
-    //     >
-    //       Volver a servicios
-    //     </Button>
-    //   </div>
-    // </section>
