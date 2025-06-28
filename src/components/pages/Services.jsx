@@ -3,7 +3,7 @@ import { servicesList } from "../../lib/tebContent"
 
 const Services = () => {
   return (
-    <section className="relative w-full min-h-screen px-4 py-20 lg:px-40 bg-white">
+    <section id="services" className="relative w-full min-h-screen px-4 py-20 lg:px-40 bg-white">
       <div className="relative z-10 flex flex-col items-center text-white space-y-16">
         <div className="flex flex-col gap-12 md:w-[90%] lg:w-[80%]">
           {servicesList.map((service, index) => {

@@ -1,41 +1,39 @@
-import Hero from "./components/pages/Hero";
 import Services from './components/pages/Services'
 import Contact from './components/pages/Contact'
-import ServiceDetail from "./components/pages/ServiceDetail";
 import Welcome from "./components/pages/Welcome";
 import Cards from "./components/ui/Cards";
 import Buses from "./components/pages/Buses";
-import Footer from "./components/pages/Footer";
 import { useDarkBg } from "./context/DarkBg";
 import { AnimatePresence, motion } from "framer-motion"
-import { Routes, Route, useLocation } from 'react-router-dom'
-import Layout from "./components/ui/Layout";
+import { useLocation } from 'react-router-dom'
 import Container from "./components/ui/Container";
+import { useEffect } from 'react';
+import { scroll } from './lib/utils';
 
 const App = () => {
   const { darken } = useDarkBg()
   const location = useLocation()
 
+  useEffect(() => {
+    let sectionId = ""
+    if(location.hash === "#hero") sectionId = "hero"
+    if (location.hash === "#services") sectionId = "services"
+    if (location.hash === "#contact") sectionId = "contact"
+    const section = document.getElementById(sectionId)
+    if (section) {
+      scroll(sectionId)
+    }
+  }, [location.hash])
 
   return (
     <>
-      <Layout>
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Container>
-                <Welcome />
-              </Container>
-              <Buses />
-              <Cards />
-             <Services />
-             <Contact />
-            </>
-          } />
-
-          <Route path="/servicio/:id" element={<ServiceDetail />} />
-        </Routes>
-      </Layout>
+      <Container>
+        <Welcome />
+      </Container>
+      <Buses />
+      <Cards />
+      <Services />
+      <Contact />
 
       <AnimatePresence>
         {darken && (

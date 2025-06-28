@@ -2,14 +2,14 @@ import Masonry from "react-masonry-css"
 import Container from "./Container"
 
 const images = [
-    "/assets/bus-bg-teb.jpg",
-    "/assets/Bus42p.png",
-    "/assets/Bus60pcama.png",
-    "/assets/Combie.png",
     "/assets/mainbg.jpg",
     "/assets/floralis.webp",
     "/assets/laboca.webp",
     "/assets/recoleta.jpg",
+    "/assets/bus-bg-teb.jpg",
+    "/assets/Bus42p.png",
+    "/assets/Bus60pcama.png",
+    "/assets/Combie.png",
     "/assets/Van.png",
     "/assets/cardales.jpg",
 ]
@@ -52,4 +52,4 @@ const Receptive = () => {
     )
 }
 
-export default Receptive;
+export default Receptive

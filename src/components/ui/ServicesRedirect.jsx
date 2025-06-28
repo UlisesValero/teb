@@ -1,9 +1,9 @@
 import { servicesList } from "../../lib/tebContent"
-import { Link, useLocation } from "react-router-dom"
+import { Link,  } from "react-router-dom"
 import { BsArrowUpRight } from "react-icons/bs"
 
 const ServiceRedirect = () => {
-  const location = useLocation()
+  // const location = useLocation()
   const currentId = location.pathname.startsWith("/servicio/")
     ? location.pathname.split("/servicio/")[1]
     : null

@@ -1,9 +1,9 @@
 import Hero from "../pages/Hero"
-import { useLocation } from "react-router-dom"
+// import { useLocation } from "react-router-dom"
 import Footer from '../pages/Footer'
 
 const Layout = ({ children }) => {
-  const location = useLocation()
+  // const location = useLocation()
   const isHome = location.pathname === '/'
 
   return (
