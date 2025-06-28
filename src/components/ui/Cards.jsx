@@ -12,10 +12,7 @@ const cardsContent = [
 
 const Cards = () => {
     return (
-       <section className="w-full flex flex-col pt-20 pb-35 gap-15 bg-gradient-to-b from-dblue to-dblue2 h-fit">
-        <h1 className="flex justify-center text-4xl md:text-5xl lg:text-7xl font-bold text-white font-p">
-        ¿Por que elegirnos?
-        </h1>
+       <section className="w-full flex flex-col py-20 gap-15 bg-gradient-to-b from-dblue to-dblue2 h-fit">
             <div className="flex flex-wrap justify-center gap-10 lg:gap-20 ">
                 {cardsContent.map((content, index) => (
                     <div

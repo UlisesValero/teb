@@ -8,13 +8,15 @@ import Buses from "./components/pages/Buses";
 import Footer from "./components/pages/Footer";
 import { useDarkBg } from "./context/DarkBg";
 import { AnimatePresence, motion } from "framer-motion"
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Layout from "./components/ui/Layout";
 import Container from "./components/ui/Container";
 
-
 const App = () => {
-  const { darken, setDarken } = useDarkBg()
+  const { darken } = useDarkBg()
+  const location = useLocation()
+
+
   return (
     <>
       <Layout>
@@ -26,9 +28,8 @@ const App = () => {
               </Container>
               <Buses />
               <Cards />
-              <Services />
-              <Contact />
-
+             <Services />
+             <Contact />
             </>
           } />
 
@@ -47,7 +48,6 @@ const App = () => {
           />
         )}
       </AnimatePresence>
-
     </>
   )
 }

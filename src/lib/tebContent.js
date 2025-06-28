@@ -6,7 +6,7 @@ import { GrMapLocation } from "react-icons/gr"
 
 export const servicesList = [
   {
-    name: "Traslado de personal",
+    name: "Transporte corporativo",
     img: "/assets/retatur.jpg",
     alt: "Imagen del micro utilizado para traslado de personal",
     text: "Soluciones eficientes para el transporte diario de empleados.",
@@ -18,7 +18,7 @@ export const servicesList = [
     icon: FaUserTie
   },
   {
-    name: "Educativo",
+    name: "Traslado educacional",
     img: "/assets/retatur.jpg",
     alt: "Imagen del micro utilizado con fines educativos",
     text: "Transporte seguro y puntual para instituciones educativas.",
