@@ -20,6 +20,7 @@ const { sliderEvents } = useSlider({ nextSlide, prevSlide })
 
   return (
     <section  {...(window.innerWidth < 768 ? sliderEvents : {})}
+    id="us"
     className="h-screen w-full overflow-hidden relative bg-white flex items-center justify-center">
       <div className="flex items-center justify-center">
         {/* Slide principal */}

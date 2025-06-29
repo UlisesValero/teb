@@ -87,7 +87,7 @@ export const contactContent = [
 export const heroCategories = [
     { category: "Inicio", route: "hero", key: "1" },
     { category: "Servicios", route: "services", key: "2" },
-    { category: "Nosotros", route: "nosotros", key: "3" },
+    { category: "Nuestra flota", route: "us", key: "3" },
     { category: "Contacto", route: "contact", key: "4" },
     { category: "Reta Tur", route: "", key: "5" }
 ]

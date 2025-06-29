@@ -17,6 +17,7 @@ const App = () => {
   useEffect(() => {
     let sectionId = ""
     if(location.hash === "#hero") sectionId = "hero"
+    if(location.hash === "#us") sectionId = "us"
     if (location.hash === "#services") sectionId = "services"
     if (location.hash === "#contact") sectionId = "contact"
     const section = document.getElementById(sectionId)

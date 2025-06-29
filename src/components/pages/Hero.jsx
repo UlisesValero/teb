@@ -13,12 +13,11 @@ const Hero = () => {
     const { setDarken } = useDarkBg()
     const [open, setOpen] = useState(false)
     const { scrollY } = useScroll()
-    console.log(heroCategories)
 
 
     return (
         <Container isNav={true}>
-            <header id="hero" className="w-full z-[60] relative pt-10">
+            <header id="hero" className=" w-full z-[60] relative pt-10">
                 <section
                     className={`h-15 border-b border-gray-400
                 ${scrollY > 50 || location.pathname !== "/" ?  "h-20 bg-dblue border-none fixed left-0 top-0 w-full z-40 transition-all duration-400" : ""}`}
@@ -73,7 +72,7 @@ const Hero = () => {
                                 </div>
                             ) : (
                                 <a
-                                href={category.route == "contact" || category.route === "hero" ? `/#${category.route}` : category.route } 
+                                href={category.route == "contact" || category.route === "hero" || category.route === "us" ? `/#${category.route}` : category.route } 
                                 key={index} 
                                 className="font-h1 text-gray-200 hover:text-gold hover:underline hover:scale-105 transition-all duration-300 text-xs md:text-lg lg:text-2xl hidden md:flex md:items-center md:h-full" 
                                 >    

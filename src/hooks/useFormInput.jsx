@@ -44,12 +44,6 @@ const useFormInput = () => {
             name: "message",
             id: "4",
             formState: formData.message
-        },
-        {
-            type: "submit",
-            htmlFor: "",
-            name: "",
-            id: "5"
         }
     ]
     return { formData, setFormData, formContent }
