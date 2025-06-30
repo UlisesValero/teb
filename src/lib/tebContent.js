@@ -70,11 +70,36 @@ export const servicesFeatures = {
 }
 
 export const busesDetail = [
-    { busType: "Mini Van", description: "Van con capacidad para 10 pasajeros", img: "/assets/Van.png", key: "1" },
-    { busType: "Kombiwagen", description: "Combi con capacidad para 19 pasajeros", img: "/assets/Combie.png", key: "2" },
-    { busType: "Bus", description: "Bus Semi-Cama climatizado + baño. Con capacidad desde 42 a 45 pasajeros", img: "/assets/Bus42p.png", key: "3" },
-    { busType: "Bus", description: "Bus Semi-Cama con capacidad para 60 personas", img: "/assets/Bus60psemi.png", key: "4" },
-    { busType: "Bus", description: "Bus Cama con capacidad para 60 personas", img: "/assets/Bus60pcama.png", key: "5" }
+  {
+    busType: "Mini Van",
+    description: "Vehículo compacto y versátil, ideal para grupos reducidos de hasta 10 pasajeros. Confort y eficiencia para traslados urbanos o cortas distancias.",
+    img: "/assets/Van.png",
+    key: "1"
+  },
+  {
+    busType: "Kombiwagen",
+    description: "Unidad intermedia con capacidad para 19 pasajeros. Perfecta para grupos medianos, con un equilibrio entre comodidad y movilidad.",
+    img: "/assets/Combie.png",
+    key: "2"
+  },
+  {
+    busType: "Bus Semi-Cama 42-45",
+    description: "Bus climatizado con asientos semi-cama y baño a bordo. Ideal para viajes de media y larga distancia con hasta 45 pasajeros.",
+    img: "/assets/Bus42p.png",
+    key: "3"
+  },
+  {
+    busType: "Bus Semi-Cama 60",
+    description: "Bus de gran capacidad con asientos semi-cama, perfecto para trasladar hasta 60 personas con confort y seguridad.",
+    img: "/assets/Bus60psemi.png",
+    key: "4"
+  },
+  {
+    busType: "Bus Cama 60",
+    description: "Máximo confort para grupos grandes: bus con asientos cama, ideal para viajes largos de hasta 60 pasajeros.",
+    img: "/assets/Bus60pcama.png",
+    key: "5"
+  }
 ]
 
 export const contactContent = [

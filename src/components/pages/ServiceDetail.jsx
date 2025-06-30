@@ -1,6 +1,6 @@
 import { servicesList } from "../../lib/tebContent"
 import { useParams, useNavigate } from "react-router-dom"
-import ArgentinaMap from "./ArgentinaMap"
+import ArgentinaMap from "../ui/ArgentinaMap"
 import CorporativeT from "../ui/CorporativeT"
 import Receptive from "../ui/Receptive"
 import ServicesRedirect from "../ui/ServicesRedirect"

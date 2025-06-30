@@ -24,9 +24,8 @@ const Welcome = () => {
 </div>
 
 
-      <div className="">
-        <Button className="hover:bg-gradient-to-b hover:from-dblue hover:to-dblue2 py-3 px-13 text-2xl font-p hover:text-gold/90 transition-all duration-400">
           <a href="#contact">
+        <Button className="hover:bg-gradient-to-b hover:from-dblue hover:to-dblue2 py-3 px-13 text-2xl font-p hover:text-gold/90 transition-all duration-400">
           <span className="transition-opacity duration-400 ease-in-out  group-hover:opacity-0">
             Contáctenos
           </span>
@@ -35,10 +34,9 @@ const Welcome = () => {
             className="absolute inset-0 m-auto opacity-0 transition-opacity duration-400 ease-in-out group-hover:opacity-100"
             size={27}
           />
-        </a>
         </Button>
+        </a>
       </div>
-    </div>
   )
 }
 

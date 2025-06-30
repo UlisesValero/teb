@@ -25,6 +25,8 @@ const useSlider = ({ nextSlide, prevSlide, threshold = 50 }) => {
       nextSlide()
     }
   }
+  
+
 
   const sliderEvents = {
     onTouchStart: onStart,
