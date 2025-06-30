@@ -89,7 +89,7 @@ export const heroCategories = [
     { category: "Servicios", route: "services", key: "2" },
     { category: "Nuestra flota", route: "us", key: "3" },
     { category: "Contacto", route: "contact", key: "4" },
-    { category: "Reta Tur", route: "", key: "5" }
+    { category: "Reta Tur", route: "retatur", key: "5" }
 ]
 
 // export const images = [

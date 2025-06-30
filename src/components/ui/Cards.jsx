@@ -12,7 +12,7 @@ const cardsContent = [
 
 const Cards = () => {
     return (
-       <section className="w-full flex flex-col py-20 gap-15 bg-gradient-to-b from-dblue to-dblue2 h-fit">
+       <section className="w-full flex flex-col py-20 gap-15 bg-gradient-to-b from-dblue2 to-dblue h-fit">
             <div className="flex flex-wrap justify-center gap-10 lg:gap-20 ">
                 {cardsContent.map((content, index) => (
                     <div

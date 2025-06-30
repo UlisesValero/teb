@@ -29,10 +29,10 @@ const App = () => {
   return (
     <>
       <Container>
-        <Welcome />
+      <Welcome />
       </Container>
-      <Buses />
       <Cards />
+            <Buses />
       <Services />
       <Contact />
 
@@ -43,7 +43,7 @@ const App = () => {
             animate={{ opacity: 0.8 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.7 }}
-            className="fixed inset-0 bg-[#000000]/70 pointer-events-none z-20"
+            className="fixed inset-0 bg-[#000000]/80 pointer-events-none z-20"
           />
         )}
       </AnimatePresence>

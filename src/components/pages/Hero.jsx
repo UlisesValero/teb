@@ -89,5 +89,3 @@ const Hero = () => {
 }
 
 export default Hero
-
-// <img src="http://teb-transportes.com/wp-content/uploads/2019/05/teb-bus-2-1.jpg" className=' brightness-50 z-10' alt="" />

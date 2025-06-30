@@ -10,7 +10,7 @@ const ServiceRedirect = () => {
 
   return (
 
-    <div className="w-[80%] py-10">
+    <div className="px-10 py-10">
         <div className="bg-white drop-shadow-2xl rounded-xl p-5 flex flex-col gap-4">
       {servicesList.map((service) => {
         const Icon = service.icon
@@ -26,7 +26,7 @@ const ServiceRedirect = () => {
               `}
           >
             <div className="flex items-center gap-3">
-              <Icon className="text-gold/80 text-4xl" />
+              <Icon className="text-gold/80 text-xl md:text-2xl lg:text-4xl" />
               <span>{service.name}</span>
             </div>
 

@@ -5,11 +5,16 @@ import CorporativeT from "../ui/CorporativeT"
 import Receptive from "../ui/Receptive"
 import ServicesRedirect from "../ui/ServicesRedirect"
 import Educational from "../ui/Educational"
+import { AnimatePresence, motion } from "framer-motion"
+import DarkBgProvider, { useDarkBg } from "../../context/DarkBg"
+import Crew from "../ui/Crew"
 
 const ServiceDetail = () => {
   const { id } = useParams()
   const navigate = useNavigate()
   const servicio = servicesList.find((s) => s.id === id)
+  const {darken} = useDarkBg()
+
 
   if (!servicio)
     return (
@@ -30,47 +35,60 @@ const ServiceDetail = () => {
       </div>
 
       {servicio.id === "nacional" ? (
-        <div className="flex flex-col md:flex-row">
-          <div className="w-[70%]">
+        <div className="flex flex-col lg:flex-row">
+          <div className="lg:w-[70%]">
             <ArgentinaMap />
           </div>
-          <div className="w-[30%]">
+          <div className="lg:w-[30%]">
             <ServicesRedirect />
           </div>
         </div>
       ) : null}
       {servicio.id === "empresarial" ? (<CorporativeT />) : null}
       {servicio.id === "turistico" ? (
-        <div className="flex flex-col md:flex-row">
-          <div className="w-[70%]">
+        <div className="flex flex-col lg:flex-row">
+          <div className="lg:w-[70%]">
             <Receptive />
           </div>
-          <div className="w-[30%]">
+          <div className="lg:w-[30%]">
             <ServicesRedirect />
           </div>
         </div>
       ) : null}
       {servicio.id === "educativo" ? (
-        <div className="w-full flex flex-col md:flex-row">
-          <div className="w-[70%]">
+        <div className="w-full flex flex-col lg:flex-row">
+          <div className="lg:w-[70%]">
             <Educational />
           </div>
-          <div className="w-[30%]">
+          <div className="lg:w-[30%]">
             <ServicesRedirect />
           </div>
 
         </div>
       ) : null}
       {servicio.id === "tripulacion" ? (
-        <div className="w-full flex flex-col md:flex-row">
-          <div className="w-[70%]">
+        <div className="w-full flex flex-col items-center lg:items-start lg:flex-row">
+          <div className="lg:w-[70%]">
+              <Crew/>
           </div>
-          <div className="w-[30%]">
+          <div className="lg:w-[30%]">
             <ServicesRedirect />
           </div>
 
         </div>
       ) : null}
+
+      <AnimatePresence>
+        {darken && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.8 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.7 }}
+            className="fixed inset-0 bg-[#000000]/80 pointer-events-none z-20"
+          />
+        )}
+      </AnimatePresence>
     </section>
   )
 }
