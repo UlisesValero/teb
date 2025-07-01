@@ -5,7 +5,7 @@ const Welcome = () => {
 
   
   return (
-    <div className="flex flex-col justify-center space-y-5 h-[70%] w-full pt-30">
+    <div className="flex flex-col justify-center space-y-5 h-[70%] w-full pt-30 lg:pt-60">
 <div className="flex flex-col items-start justify-center gap-3 text-gray-300 w-full">
   <div className="flex flex-col md:flex-row md:items-center md:gap-2">
     <div className="flex">

@@ -7,12 +7,12 @@ const useCarousel = () => {
   const [direction, setDirection] = useState(0)
 
   const nextSlide = () => {
-    setDirection(1);
+    setDirection(-1);
     setCurrent((prev) => (prev + 1) % total)
   };
 
   const prevSlide = () => {
-    setDirection(-1)
+    setDirection(1)
     setCurrent((prev) => (prev - 1 + total) % total)
   };
 

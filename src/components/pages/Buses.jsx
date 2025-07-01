@@ -53,7 +53,7 @@ const Buses = () => {
           {/* Botones */}
           <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-20 ">
             <button
-              onClick={nextSlide}
+              onClick={prevSlide}
               className="p-3 rounded-full border border-gray-300 bg-white shadow-md hover:bg-gold hover:text-white transition cursor-pointer"
             >
               <ChevronLeft size={24} />
@@ -61,7 +61,7 @@ const Buses = () => {
           </div>
           <div className="absolute top-1/2 right-4 transform -translate-y-1/2 z-20">
             <button
-              onClick={prevSlide}
+              onClick={nextSlide}
               className="p-3 rounded-full border border-gray-300 bg-white shadow-md hover:bg-gold hover:text-white transition cursor-pointer"
             >
               <ChevronRight size={24} />
@@ -70,42 +70,41 @@ const Buses = () => {
         </div>
 
         {/* Spoilers */}
-<div className="w-full pt-10 overflow-x-auto">
-  <motion.div
-    key={current} 
-    initial={{ opacity: 0, x: 10 }}
-    animate={{ opacity: 1, x: 0.5 }}
-    transition={{ duration: 0.8 }}
-    className="flex gap-4 justify-start md:justify-center min-w-max pb-2"
-  >
-    {busesDetail.map((item, index) => {
-  const isActive = index === current;
+        <div className="w-full pt-10 overflow-x-auto">
+          <motion.div
+            key={current}
+            initial={{ opacity: 0, x: 10 }}
+            animate={{ opacity: 1, x: 0.5 }}
+            transition={{ duration: 0.8 }}
+            className="flex gap-4 justify-start md:justify-center min-w-max pb-2"
+          >
+            {busesDetail.map((item, index) => {
+              const isActive = index === current;
 
-      return (
-        <motion.div
-      key={item.key}
-      onClick={() => !isActive && goToSlide(index)}
-      className={`group flex flex-col justify-between py-3 px-7 min-w-[140px] max-w-[200px] rounded-lg shadow-lg cursor-pointer transition-transform duration-300
+              return (
+                <motion.div
+                  key={item.key}
+                  onClick={() => !isActive && goToSlide(index)}
+                  className={`group flex flex-col justify-between py-3 px-7 min-w-[140px] max-w-[190px] rounded-lg shadow-lg cursor-pointer transition-transform duration-300
         ${isActive ? "border-2 border-gold  pointer-events-none scale-100" : "bg-white border border-gray-200 hover:border-gold hover:shadow-md hover:scale-[1.02]"}`}
-    >
-      <motion.img
-        src={item.img}
-        alt={item.busType}
-        className={`h-fit transition-all duration-300 hover:blur-none  ${
-          isActive ? "blur-none" : "blur-xs group-hover:scale-[1.01]"
-        }`}
-        layoutId={`bus-img-${item.key}`}
-      />
-      <div className="text-center">
-        <h3 className={`font-h3 text-sm ${isActive ? "text-gold/70" : "text-gold"}`}>
-          {item.busType}
-        </h3>
-      </div>
-    </motion.div>
-      );
-    })}
-  </motion.div>
-</div>
+                >
+                  <motion.img
+                    src={item.img}
+                    alt={item.busType}
+                    className={`h-fit transition-all duration-300 hover:blur-none  ${isActive ? "blur-none" : "blur-xs group-hover:scale-[1.01]"
+                      }`}
+                    layoutId={`bus-img-${item.key}`}
+                  />
+                  <div className="text-center">
+                    <h3 className={`font-h3 text-sm ${isActive ? "text-gold/70" : "text-gold"}`}>
+                      {item.busType}
+                    </h3>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
 
       </div>
     </section>

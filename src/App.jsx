@@ -9,6 +9,8 @@ import { AnimatePresence, motion } from "framer-motion"
 import { useLocation } from 'react-router-dom'
 import { useEffect } from 'react';
 import { scroll } from './lib/utils';
+import UseAnimation from './hooks/UseAnimation';
+import AnimatedNumbers from './components/ui/AnimatedNumbers';
 
 const App = () => {
   const { darken } = useDarkBg()
@@ -28,26 +30,40 @@ const App = () => {
 
   return (
     <>
-      <Container>
-        <Welcome />
-      </Container>
-      <Cards />
-      <Buses />
-      <Services />
-      <Contact />
+<Container>
+  <UseAnimation>
+    <Welcome />
+  </UseAnimation>
+</Container>
 
-      <AnimatePresence>
-        {darken && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.8 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.7 }}
-            className="fixed inset-0 bg-[#000000]/80 pointer-events-none z-20"
-          />
-        )}
-      </AnimatePresence>
-    </>
+  <Cards />
+
+<UseAnimation>
+  <Buses />
+</UseAnimation>
+
+<UseAnimation>
+  <AnimatedNumbers />
+</UseAnimation>
+
+  <Services />
+
+<UseAnimation>
+  <Contact />
+</UseAnimation>
+
+    <AnimatePresence>
+      {darken && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.8 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.7 }}
+          className="fixed inset-0 bg-[#000000]/80 pointer-events-none z-20"
+        />
+      )}
+    </AnimatePresence>
+  </>
   )
 }
 

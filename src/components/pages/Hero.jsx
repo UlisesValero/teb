@@ -7,8 +7,6 @@ import useScroll from "../../hooks/useScroll";
 import { useDarkBg } from "../../context/DarkBg";
 import Container from "../ui/Container";
 
-
-
 const Hero = () => {
     const { setDarken } = useDarkBg()
     const [open, setOpen] = useState(false)
@@ -20,7 +18,7 @@ const Hero = () => {
             <header id="hero" className=" w-full z-[60] relative pt-10">
                 <section
                     className={`h-15 border-b border-gray-400
-                ${scrollY > 50 || location.pathname !== "/" ?  "h-20 bg-dblue border-none fixed left-0 top-0 w-full z-40 transition-all duration-400" : ""}`}
+                ${scrollY > 150 || location.pathname !== "/" ?  "h-20 bg-dblue border-none fixed left-0 top-0 w-full z-40 transition-all duration-500" : ""}`}
                 >
                     <div className="flex flex-row justify-evenly items-center w-full gap-7 h-full">
                         <a href="/#hero" className="">
