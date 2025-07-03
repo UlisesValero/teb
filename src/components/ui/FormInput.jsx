@@ -55,15 +55,18 @@ const FormInput = () => {
   }
 
   return (
-    <section ref={Form} onSubmit={handleSubmit} className='py-50 px-10 w-full flex justify-center'>
-      <div className='flex flex-col lg:flex-row gap-4 lg:gap-0 w-[70%] bg-dblue rounded-2xl '>
+    <section ref={Form} onSubmit={handleSubmit} className='py-50 px-2 md:px-10 w-full flex justify-center'>
+      <div className='flex flex-col lg:flex-row gap-4 lg:gap-0 bg-dblue rounded-2xl'>
 
         <div className='lg:w-[65%] flex flex-col items-center gap-5 py-15'>
+          <h1 className='font-h3 text-2xl text-gold font-semibold text-center px-1'>
+          Contrata nuestros servicios
+          </h1>
           {formContent.map((input) => (
             <form key={input.id} className="w-[90%] relative">
               {input.type === "textarea" ? (
                 <textarea
-                  className="peer w-full  border-2 focus:border-lblue/80 transition-all text-white font-bold text-sm 
+                  className="peer w-full  border-1 focus:border-lblue/80 transition-all text-white font-bold text-sm 
               rounded pt-8 pb-2 px-3 focus:outline-none"
                   value={formData[input.name]}
                   type={input.type}
@@ -76,7 +79,7 @@ const FormInput = () => {
                 />
               ) : (
                 <input
-                  className="peer w-full border-2 focus:border-lblue/80 transition-all duration-400  text-white font-bold text-sm 
+                  className="peer w-full border-1 focus:border-lblue/80 transition-all duration-400 text-white font-bold text-sm 
               rounded pt-8 pb-2 px-3 focus:outline-none"
                   value={formData[input.name]}
                   type={input.type}

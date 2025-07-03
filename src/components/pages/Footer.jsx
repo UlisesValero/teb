@@ -29,7 +29,7 @@ const Footer = () => {
 </div>
 
          <div className="lg:w-1/3 ">
-        <iframe className="w-full h-70" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.2425468484034!2d-58.5551893!3d-34.57272890000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb9556c0339f7%3A0x7fd2737167883aa9!2sTB%20Transportes%20-%20RETATUR!5e0!3m2!1ses!2sar!4v1751152012570!5m2!1ses!2sar"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe className="w-full h-70" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.2425468484034!2d-58.5551893!3d-34.57272890000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb9556c0339f7%3A0x7fd2737167883aa9!2sTB%20Transportes%20-%20RETATUR!5e0!3m2!1ses!2sar!4v1751152012570!5m2!1ses!2sar"  loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
 <div className="lg:w-1/3 flex flex-col gap-10 justify-center">

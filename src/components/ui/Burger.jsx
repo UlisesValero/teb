@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { heroCategories } from '../../lib/tebContent';
+import { heroCategories, servicesList } from '../../lib/tebContent';
 import { Menu } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoCloseOutline } from "react-icons/io5";
@@ -14,7 +14,7 @@ const Burger = () => {
 
     return (
         <div onClick={() => setDarken(prev => !prev)}>
-            <Menu  onClick={() => setOpen(prev => !prev)} size={30} className="text-white bg-dblue/60 rounded " />
+            <Menu onClick={() => setOpen(prev => !prev)} size={30} className="text-white bg-dblue/60 rounded " />
 
             <AnimatePresence>
                 {open && (
@@ -51,9 +51,20 @@ const Burger = () => {
                                                         animate={{ opacity: 1, x: 0 }}
                                                         exit={{ opacity: 0, x: 30 }}
                                                         transition={{ duration: 0.4, ease: "easeOut" }}
-                                                        className="pl-5 flex flex-col pt-2"
+                                                        className="pl-4 gap-3 flex flex-col pt-2"
                                                     >
-                                                        HOLA
+                                                            {servicesList.map(service => (
+                                                                    <a
+                                                                        className="border-b border-gray-300 text-dblue text-md font-semibold"
+                                                                        key={service.key}
+                                                                        href={`/servicio/${service.id}`}
+                                                                    >
+                                                                        <h3 className="text-lg font-h3 ">
+                                                                        {service.name}
+                                                                        </h3>
+                                                                    </a>
+                                                                ))
+                                                            }
                                                     </motion.div>
                                                 )}
                                             </AnimatePresence>
@@ -64,9 +75,14 @@ const Burger = () => {
                                             className="border-b border-gray-300 pb-2"
                                             key={categories.key}
                                         >
-                                            <h1 className="text-4xl font-h1 font-semibold">
-                                                {categories.category}
-                                            </h1>
+                                            <a
+                                                onClick={() => setOpen(prev => !prev)}
+                                                href={categories.route === "contact" || categories.route === "hero" || categories.route === "us" ? `/#${categories.route}` : categories.route}
+                                            >
+                                                <h1 className="text-4xl font-h1 font-semibold">
+                                                    {categories.category}
+                                                </h1>
+                                            </a>
                                         </div>
                                     )
                             ))}

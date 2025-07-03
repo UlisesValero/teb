@@ -5,9 +5,23 @@ import { motion } from "framer-motion"
 
 const Services = () => {
   return (
-    <section id="services" className="relative w-full min-h-screen px-4 py-20 lg:px-40 bg-white">
+    <section id="services" className="relative w-full min-h-screen px-4 py-20 lg:px-40 bg-white border-b-3 border-gray-200">
       <div className="relative z-10 flex flex-col items-center text-white space-y-16">
         <div className="flex flex-col gap-12 md:w-[90%] lg:w-[80%]">
+          <div className="text-center flex flex-col gap-1 pb-10">
+            <motion.h2
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+  className="text-6xl font-h3 font-bold text-dblue"
+>
+  Servicios
+</motion.h2>
+
+            <p className="text-gold font-p text-lg">Soluciones de movilidad adaptadas a tus necesidades</p>
+          </div>
+
           {servicesList.map((service, index) => {
             const impar = index % 2 !== 0
 
@@ -38,8 +52,8 @@ const Services = () => {
 
                     <div
                       className={`md:w-1/3 p-8 ${impar
-                          ? "rounded-b-2xl md:rounded-br-none md:rounded-l-2xl"
-                          : "rounded-b-2xl md:rounded-bl-none md:rounded-r-2xl"
+                        ? "rounded-b-2xl md:rounded-br-none md:rounded-l-2xl"
+                        : "rounded-b-2xl md:rounded-bl-none md:rounded-r-2xl"
                         } bg-dblue backdrop-blur-md flex flex-col justify-center text-left space-y-3`}
                     >
                       <h1 className="text-4xl font-h1">{service.name}</h1>
