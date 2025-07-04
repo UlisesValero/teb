@@ -1,4 +1,3 @@
-import { TbMailForward } from "react-icons/tb";
 
 const Button = ({ text, children, className = "" }) => {
   return (

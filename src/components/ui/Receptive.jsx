@@ -25,7 +25,7 @@ const Receptive = () => {
         <>
             <Container>
                 <div className="">
-                
+                    
                 </div>
                 <div className="py-10 ">
                     <Masonry

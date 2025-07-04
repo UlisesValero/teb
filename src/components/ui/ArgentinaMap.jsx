@@ -1,4 +1,6 @@
-import React from "react";
+import { CiLocationOn } from "react-icons/ci";
+import Button from '../ui/Button'
+import { HiArrowUturnRight } from "react-icons/hi2";
 
 const destinos = [
     { nombre: "Región Noroeste", top: "12%", left: "44%" },
@@ -9,10 +11,64 @@ const destinos = [
     { nombre: "Ushuaia", top: "85%", left: "40%" },
 ];
 
+const features = [
+      {
+    icon: <CiLocationOn className="text-lblue" size={24} />,
+    title: "Litoral Termal",
+    desc: "Colón, La Paz, Federación, Concordia."
+  },
+  {
+    icon: <CiLocationOn className="text-lblue" size={24} />,
+    title: "Región del Noroeste",
+    desc: "Valles Calchaquíes, Tren de las Nubes, Quebrada de Humahuaca, Valle de la Luna, Tilcara, Cafayate."
+  },
+  {
+    icon: <CiLocationOn className="text-lblue" size={24} />,
+    title: "Córdoba",
+    desc: "Villa General Belgrano (Oktoberfest), Cerro Uritorco, Valle de Punilla, Traslasierra, Villa Carlos Paz."
+  },
+  {
+    icon: <CiLocationOn className="text-lblue" size={24} />,
+    title: "Mendoza",
+    desc: "Ruta del vino, Valle Grande, Cerro de la Gloria."
+  },
+  {
+    icon: <CiLocationOn className="text-lblue" size={24} />,
+    title: "Patagonia Atlántica",
+    desc: "Península de Valdés (fauna), Puerto Madryn (avistaje de ballenas)."
+  },
+  {
+    icon: <CiLocationOn className="text-lblue" size={24} />,
+    title: "Santa Cruz y Tierra del Fuego",
+    desc: "Glaciar Perito Moreno, Ushuaia (la ciudad más austral del mundo)."
+  }
+]
+
 const ArgentinaMap = () => {
-    return (
-        <section className="flex flex-col lg:flex-row bg-gray-200 ">
-            <div className="relative w-full max-w-2xl ">
+  return (
+    <section className="bg-white py-16 px-4 md:px-10">
+      <div className="text-center">
+        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          Servicio especializado en el transporte seguro, puntual y confiable de estudiantes.
+        </p>
+      </div>
+
+      <div className="mt-12 flex flex-col lg:flex-row gap-12">
+
+        <div className="flex-1 space-y-8">
+            <h1 className="font-h3 text-center text-2xl text-gold font-extrabold">Destinos habituales</h1>
+          {features.map((feature, index) => (
+            <div key={index} className="flex items-start gap-4">
+              <div className="mt-1">{feature.icon}</div>
+              <div>
+                <h4 className="text-lg font-semibold text-gray-800">{feature.title}</h4>
+                <p className="text-gray-600">{feature.desc}</p>
+              </div>
+            </div>
+          ))}
+          </div>
+
+                   <div className="relative w-full max-w-2xl ">
                 <img
                     src="/assets/map.png"
                     alt="Mapa de Argentina"
@@ -31,33 +87,25 @@ const ArgentinaMap = () => {
                         </span>
                     </div>
                 ))}
+                        </div>
             </div>
-            <div>
-                <ul className="space-y-4 list-disc list-inside text-base lg:text-lg">         <li>
-                    <span className="font-medium">Región del Noroeste:</span> Valles Calchaquíes, Tren de las Nubes, Quebrada de Humahuaca, Valle de la Luna, Tilcara, Cafayate.
-                </li>
-                    <li>
-                        <span className="font-medium">Litoral Termal:</span> Colón, La Paz, Federación, Concordia.
-                    </li>
-                    <li>
-                        <span className="font-medium">Córdoba:</span> Villa General Belgrano (Oktoberfest), Cerro Uritorco, Valle de Punilla, Traslasierra, Villa Carlos Paz.
-                    </li>
-                    <li>
-                        <span className="font-medium">Mendoza:</span> Ruta del vino, Valle Grande, Cerro de la Gloria.
-                    </li>
-                    <li>
-                        <span className="font-medium">Centros de esquí:</span> Chapelco, Las Leñas, La Hoya, Cerro Catedral.
-                    </li>
-                    <li>
-                        <span className="font-medium">Patagonia Atlántica:</span> Península de Valdés (fauna), Puerto Madryn (avistaje de ballenas).
-                    </li>
-                    <li>
-                        <span className="font-medium">Santa Cruz y Tierra del Fuego:</span> Glaciar Perito Moreno, Ushuaia (la ciudad más austral del mundo).
-                    </li>
-                </ul>
-            </div>
-        </section>
-    );
-};
 
-export default ArgentinaMap;
+      <div className="flex justify-center pt-20">
+        <a href={window.location.pathname !== "/" ? "/#contact" : "#contact"}>
+          <Button className="relative group px-10 py-2 border-gray-300 hover:border-gold/80 border text-xl font-p hover:text-gold/80 overflow-hidden">
+
+            <span className="transition-opacity duration-400 ease-in-out group-hover:opacity-0">
+              Solicita cotizacion
+            </span>
+            <HiArrowUturnRight
+              className="absolute inset-0 m-auto opacity-0 transition-opacity duration-400 ease-in-out group-hover:opacity-100"
+              size={24}
+            />
+          </Button>
+        </a>
+      </div>
+    </section>
+  )
+}
+
+export default ArgentinaMap

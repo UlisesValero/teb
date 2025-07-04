@@ -6,8 +6,9 @@ import Receptive from "../ui/Receptive"
 import ServicesRedirect from "../ui/ServicesRedirect"
 import Educational from "../ui/Educational"
 import { AnimatePresence, motion } from "framer-motion"
-import DarkBgProvider, { useDarkBg } from "../../context/DarkBg"
+import { useDarkBg } from "../../context/DarkBg"
 import Crew from "../ui/Crew"
+import UseAnimation from "../../hooks/UseAnimation"
 
 const ServiceDetail = () => {
   const { id } = useParams()
@@ -35,6 +36,7 @@ const ServiceDetail = () => {
       </div>
 
       {servicio.id === "nacional" ? (
+        <UseAnimation>
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-[70%]">
             <ArgentinaMap />
@@ -43,9 +45,13 @@ const ServiceDetail = () => {
             <ServicesRedirect />
           </div>
         </div>
+        </UseAnimation>
       ) : null}
-      {servicio.id === "empresarial" ? (<CorporativeT />) : null}
+      {servicio.id === "empresarial" ? (
+        <UseAnimation><CorporativeT /></UseAnimation>
+      ) : null}
       {servicio.id === "turistico" ? (
+        <UseAnimation>
         <div className="flex flex-col lg:flex-row">
           <div className="lg:w-[70%]">
             <Receptive />
@@ -54,8 +60,10 @@ const ServiceDetail = () => {
             <ServicesRedirect />
           </div>
         </div>
+        </UseAnimation>
       ) : null}
       {servicio.id === "educativo" ? (
+        <UseAnimation>
         <div className="w-full flex flex-col lg:flex-row">
           <div className="lg:w-[70%]">
             <Educational />
@@ -63,10 +71,11 @@ const ServiceDetail = () => {
           <div className="lg:w-[30%]">
             <ServicesRedirect />
           </div>
-
         </div>
+        </UseAnimation>
       ) : null}
       {servicio.id === "tripulacion" ? (
+        <UseAnimation>
         <div className="w-full flex flex-col items-center lg:items-start lg:flex-row">
           <div className="lg:w-[70%]">
               <Crew/>
@@ -74,8 +83,8 @@ const ServiceDetail = () => {
           <div className="lg:w-[30%]">
             <ServicesRedirect />
           </div>
-
         </div>
+        </UseAnimation>
       ) : null}
 
       <AnimatePresence>
