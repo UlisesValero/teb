@@ -11,6 +11,7 @@ import { useEffect } from 'react';
 import { scroll } from './lib/utils';
 import UseAnimation from './hooks/UseAnimation';
 import AnimatedNumbers from './components/ui/AnimatedNumbers';
+import Reta from './components/pages/Reta';
 
 const App = () => {
   const { darken } = useDarkBg()
@@ -50,6 +51,10 @@ const App = () => {
 
 <UseAnimation>
   <Contact />
+</UseAnimation>
+
+<UseAnimation>
+  {window.location === "/retatur" || window.location === "/servicio/" ? <Reta/> : null}
 </UseAnimation>
 
     <AnimatePresence>

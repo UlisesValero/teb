@@ -1,5 +1,5 @@
 import { servicesList } from "../../lib/tebContent"
-import { useParams, useNavigate } from "react-router-dom"
+import { useParams, useNavigate, useLocation } from "react-router-dom"
 import ArgentinaMap from "../ui/ArgentinaMap"
 import CorporativeT from "../ui/CorporativeT"
 import Receptive from "../ui/Receptive"
@@ -9,13 +9,20 @@ import { AnimatePresence, motion } from "framer-motion"
 import { useDarkBg } from "../../context/DarkBg"
 import Crew from "../ui/Crew"
 import UseAnimation from "../../hooks/UseAnimation"
+import { useEffect } from "react"
+import PageTransition from "../../hooks/PageTransition"
 
 const ServiceDetail = () => {
   const { id } = useParams()
   const navigate = useNavigate()
   const servicio = servicesList.find((s) => s.id === id)
+  const location = useLocation();
   const {darken} = useDarkBg()
 
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [location.pathname]);
 
   if (!servicio)
     return (
@@ -34,10 +41,10 @@ const ServiceDetail = () => {
           {/* COLOCAR TEXTOS DESDE tebContent CON EL RESPECTIVO TITULO DE CADA SERVICIO */}
         </div>
       </div>
+    <PageTransition>
 
       {servicio.id === "nacional" ? (
-        <UseAnimation>
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start">
           <div className="lg:w-[70%]">
             <ArgentinaMap />
           </div>
@@ -45,14 +52,12 @@ const ServiceDetail = () => {
             <ServicesRedirect />
           </div>
         </div>
-        </UseAnimation>
       ) : null}
       {servicio.id === "empresarial" ? (
         <UseAnimation><CorporativeT /></UseAnimation>
       ) : null}
       {servicio.id === "turistico" ? (
-        <UseAnimation>
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start">
           <div className="lg:w-[70%]">
             <Receptive />
           </div>
@@ -60,11 +65,9 @@ const ServiceDetail = () => {
             <ServicesRedirect />
           </div>
         </div>
-        </UseAnimation>
       ) : null}
       {servicio.id === "educativo" ? (
-        <UseAnimation>
-        <div className="w-full flex flex-col lg:flex-row">
+        <div className="w-full flex flex-col lg:flex-row items-center lg:items-start">
           <div className="lg:w-[70%]">
             <Educational />
           </div>
@@ -72,10 +75,8 @@ const ServiceDetail = () => {
             <ServicesRedirect />
           </div>
         </div>
-        </UseAnimation>
       ) : null}
       {servicio.id === "tripulacion" ? (
-        <UseAnimation>
         <div className="w-full flex flex-col items-center lg:items-start lg:flex-row">
           <div className="lg:w-[70%]">
               <Crew/>
@@ -84,7 +85,6 @@ const ServiceDetail = () => {
             <ServicesRedirect />
           </div>
         </div>
-        </UseAnimation>
       ) : null}
 
       <AnimatePresence>
@@ -98,6 +98,7 @@ const ServiceDetail = () => {
           />
         )}
       </AnimatePresence>
+          </PageTransition>
     </section>
   )
 }
