@@ -14,8 +14,8 @@ const useFormInput = () => {
         {
             label: "Nombre",
             type: "text",
-            htmlFor: "name",
-            name: "name",
+            htmlFor: "fullName",
+            name: "fullName",
             id: "1",
             formState: formData.fullName
         },
