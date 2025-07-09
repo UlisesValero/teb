@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 
 const Services = () => {
   return (
-    <section id="services" className="relative w-full min-h-screen px-4 py-20 lg:px-40 bg-white border-b-3 border-gray-200">
+    <section id="services" className="relative w-full min-h-screen px-4 py-20 lg:px-40 bg-white">
       <div className="relative z-10 flex flex-col items-center text-white space-y-16">
         <div className="flex flex-col gap-12 md:w-[90%] lg:w-[80%]">
           <div className="text-center flex flex-col gap-1 pb-10">
@@ -42,7 +42,7 @@ const Services = () => {
                     className={`relative flex flex-col md:flex-row ${impar ? "md:flex-row-reverse" : ""
                       } overflow-hidden cursor-pointer border border-white/10 rounded-2xl hover:scale-[1.01] transition-all duration-300`}
                   >
-                    <div className="md:w-1/2 h-64 md:h-[22rem] relative">
+                    <div className="md:w-1/2 h-64 md:h-[15rem] relative">
                       <img
                         src={service.img}
                         alt={service.alt}

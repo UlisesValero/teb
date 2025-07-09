@@ -55,8 +55,8 @@ const FormInput = () => {
   }
 
   return (
-    <section ref={Form} onSubmit={handleSubmit} className='py-50 px-2 md:px-10 w-full flex justify-center'>
-      <div className='flex flex-col lg:flex-row gap-4 lg:gap-0 bg-dblue rounded-2xl'>
+    <section ref={Form} onSubmit={handleSubmit} className='py-50 px-2 md:px-10 w-full flex justify-center '>
+      <div className='flex flex-col lg:flex-row gap-4 lg:gap-0 bg-dblue rounded-2xl shadow-2xl '>
 
         <div className='lg:w-[65%] flex flex-col items-center gap-5 py-15'>
           <h1 className='font-h3 text-2xl text-gold font-semibold text-center px-1'>

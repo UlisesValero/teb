@@ -1,6 +1,7 @@
 import Hero from "../pages/Hero"
 // import { useLocation } from "react-router-dom"
 import Footer from '../pages/Footer'
+import UseAnimation from '../../hooks/UseAnimation'
 
 const Layout = ({ children }) => {
   // const location = useLocation()
@@ -9,10 +10,12 @@ const Layout = ({ children }) => {
   return (
     <>
       {isHome ? (
-        <div className="bg-[url('/assets/mainbg.jpg')] bg-cover bg-fixed bg-center h-[90dvh]">
+        <div className="bg-[url('/assets/mainbg.jpg')] bg-cover bg-fixed bg-center h-[100dvh]">
+          <UseAnimation>
           <Hero />
           {children}
           <Footer />
+          </UseAnimation>
         </div>
       ) : (
         <>

@@ -37,14 +37,15 @@ const App = () => {
   </UseAnimation>
 </Container>
 
-  <Cards />
+<AnimatedNumbers />
 
 <UseAnimation>
   <Buses />
 </UseAnimation>
 
 <UseAnimation>
-  <AnimatedNumbers />
+    <Cards />
+
 </UseAnimation>
 
   <Services />

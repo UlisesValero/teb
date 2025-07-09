@@ -15,19 +15,22 @@ const Hero = () => {
 
     return (
         <Container isNav={true}>
-            <header id="hero" className=" w-full z-[60] relative pt-10">
+            <header id="hero" className=" w-full flex justify-center z-[60] relative pt-7">
                 <section
-                    className={`h-15 border-b border-gray-400
+                    className={`h-fit border-b border-gold w-fit
                 ${scrollY > 150 || location.pathname !== "/" ?  "h-20 bg-dblue border-none fixed left-0 top-0 w-full z-40 transition-all duration-500" : ""}`}
                 >
-                    <div className="flex flex-row justify-evenly items-center w-full gap-7 h-full">
+                    <div className={`${scrollY > 150 || location.pathname !== "/" ? "flex flex-row items-center justify-evenly w-full gap- h-18" : "flex md:flex-col gap-8 pb-2 md:pb-0 "}`}>
+                        <div className={`${scrollY > 150 || location.pathname !== "/" ? "" : "w-full flex justify-center"}`}>
                         <a href="/#hero" className="">
                             <img src="http://teb-transportes.com/wp-content/uploads/2019/01/logo-teb-web.png" className="w-30 lg:w-40" alt="" />
 
                         </a>
+                        </div>
                         <div className="md:hidden">
                             <Burger />
                         </div>
+                        <div className="flex gap-15 h-full">
                         {heroCategories.map((category, index) => (
                             category.category === "Servicios" ? (
                                 <div
@@ -44,7 +47,7 @@ const Hero = () => {
                                 >
                                     <a 
                                     href={`/#${category.route}`}
-                                    className="font-h1 text-gray-200 text-xs md:text-lg lg:text-2xl hover:text-gold hover:underline cursor-pointer flex items-center md:h-full">
+                                    className="font-h1 text-gray-200 text-xs md:text-lg lg:text-2xl hover:text-gold cursor-pointer flex items-center md:h-full">
                                         {category.category}
                                         <MdArrowRight
                                             className={`pl-1  transition-transform duration-300 ${open ? "rotate-90" : "rotate-0"}`}
@@ -53,7 +56,7 @@ const Hero = () => {
 
                                     <div
                                         className={`w-55 h-fit flex flex-col space-y-3 p-2 absolute -left-1 bg-white border border-gray-400  z-50 rounded-b-lg shadow-lg transform transition-all duration-300 ease-in-out 
-                                        ${scrollY > 50 || location.pathname !== "/"  ? "top-20" : "top-14.5"} ${open ?  "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"}`}
+                                        ${scrollY > 50 || location.pathname !== "/"  ? "top-18" : "top-8 pt-5"} ${open ?  "opacity-100 scale-100 pointer-events-auto" : "opacity-0 scale-95 pointer-events-none"}`}
                                     >
                                         {servicesList.map(service => (
                                             <a
@@ -72,12 +75,13 @@ const Hero = () => {
                                 <a
                                 href={category.route == "contact" || category.route === "hero" || category.route === "us" ? `/#${category.route}` : category.route } 
                                 key={index} 
-                                className="font-h1 text-gray-200 hover:text-gold hover:underline hover:scale-105 transition-all duration-300 text-xs md:text-lg lg:text-2xl hidden md:flex md:items-center md:h-full" 
+                                className="font-h1 text-gray-200 hover:text-gold hover:scale-105 transition-all duration-300 text-xs md:text-lg lg:text-2xl hidden md:flex md:items-center md:h-full" 
                                 >    
                                 {category.category}
                                 </a>
                             )
                         ))}
+                        </div>
                     </div>
                 </section>
 

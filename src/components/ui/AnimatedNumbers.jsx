@@ -1,15 +1,18 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { MdModeOfTravel } from "react-icons/md"
 import { LuMilestone } from "react-icons/lu"
 import { MdCalendarToday } from "react-icons/md"
+import { motion } from "framer-motion"
+import { useInView } from "framer-motion"
 
-
-
-
-const AnimatedNumber = ({ value, duration = 3000 }) => {
+const AnimatedNumber = ({ value, duration = 2000 }) => {
     const [displayValue, setDisplayValue] = useState(0)
+    const ref = useRef(null)
+    const isInView = useInView(ref, { amount: 0.3, once: true })
 
     useEffect(() => {
+        if (!isInView) return
+
         let start = 0
         const startTime = performance.now()
 
@@ -26,21 +29,31 @@ const AnimatedNumber = ({ value, duration = 3000 }) => {
             }
         }
 
-        requestAnimationFrame(animate);
-    }, [value, duration])
+        requestAnimationFrame(animate)
+    }, [isInView, value, duration])
 
     return (
-        <div className="text-4xl font-h3 font-bold text-white">
+        <div
+            ref={ref}
+            className="text-4xl font-h3 font-bold text-white"
+        >
             {displayValue.toLocaleString()}
         </div>
     )
 }
 
+
 export default function AnimatedNumbers() {
     return (
         <div className="bg-dblue py-20 lg:py-30 flex justify-center">
-            <div className="w-fit flex flex-col lg:flex-row items-center gap-20 lg:gap-50">
-                {/* Viajes realizados */}
+            
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+                className="w-fit flex flex-col lg:flex-row items-center gap-20 lg:gap-50"
+            >
                 <div className="flex flex-col gap-2 items-center">
                     <div className="flex flex-col items-center">
                         <MdModeOfTravel size={45} className="text-gold mb-2" />
@@ -49,7 +62,6 @@ export default function AnimatedNumbers() {
                     <h1 className="text-center text-lblue font-h3 text-xl">Viajes realizados</h1>
                 </div>
 
-                {/* KM recorridos */}
                 <div className="flex flex-col gap-2 items-center">
                     <div className="flex flex-col items-center">
                         <LuMilestone size={45} className="text-gold mb-2" />
@@ -61,7 +73,6 @@ export default function AnimatedNumbers() {
                     <h1 className="text-center text-lblue font-h3 text-xl">Recorridos</h1>
                 </div>
 
-                {/* Años de experiencia */}
                 <div className="flex flex-col gap-2 items-center">
                     <div className="flex flex-col items-center">
                         <MdCalendarToday size={45} className="text-gold mb-2" />
@@ -69,7 +80,8 @@ export default function AnimatedNumbers() {
                     </div>
                     <h1 className="text-center text-lblue font-h3 text-xl">35 años de experiencia</h1>
                 </div>
-            </div>
+            </motion.div>
+            
         </div>
     )
 }
