@@ -23,7 +23,7 @@ const Hero = () => {
                     <div className={`${scrollY > 150 || location.pathname !== "/" ? "flex flex-row items-center justify-evenly w-full gap- h-18" : "flex md:flex-col gap-8 pb-2 md:pb-0 "}`}>
                         <div className={`${scrollY > 150 || location.pathname !== "/" ? "" : "w-full flex justify-center"}`}>
                         <a href="/#hero" className="">
-                            <img src="http://teb-transportes.com/wp-content/uploads/2019/01/logo-teb-web.png" className="w-30 lg:w-40" alt="" />
+                            <img src="/assets/logoTeb.png" className="w-30 lg:w-40" alt="" />
 
                         </a>
                         </div>
