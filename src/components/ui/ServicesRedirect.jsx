@@ -1,9 +1,8 @@
 import { servicesList } from "../../lib/tebContent"
-import { Link,  } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { BsArrowUpRight } from "react-icons/bs"
 
 const ServiceRedirect = () => {
-  // const location = useLocation()
   const currentId = location.pathname.startsWith("/servicio/")
     ? location.pathname.split("/servicio/")[1]
     : null
@@ -22,7 +21,7 @@ const ServiceRedirect = () => {
             to={`/servicio/${service.id}`}
             className={`pb-1 border-b border-gray-300 flex items-center justify-between group text-dblue text-xl
                 hover:text-dblue/80 hover:font-semibold hover:brightness-110 hover:bg-gray-300/50 hover:scale-[1.02] transition-all duration-300
-                ${isActive ? "text-dblue/80 font-semibold brightness-110 bg-gray-300/50 scale-[1.04]" : ""}
+                ${isActive ? "text-dblue/80 font-semibold brightness-110 bg-gray-300/50 scale-[1.02]" : ""}
               `}
           >
             <div className="flex items-center gap-3">

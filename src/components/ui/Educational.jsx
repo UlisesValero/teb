@@ -33,9 +33,9 @@ const features = [
 
 const Educational = () => {
   return (
-    <section className="bg-white py-16 px-4 md:px-10">
+    <section className="bg-white py-10 px-4 md:px-10">
       <div className="text-center">
-        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+        <p className=" text-gold max-w-4xl mx-auto font-h3 text-md md:text-lg lg:text-xl font-semibold">
           Servicio especializado en el transporte seguro, puntual y confiable de estudiantes.
         </p>
       </div>

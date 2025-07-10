@@ -1,7 +1,7 @@
 
-import { GraduationCap, Clock, ShieldCheck, FileText, Users } from "lucide-react"
-import Button from '../ui/Button'
+import { GraduationCap, Clock, FileText, Users } from "lucide-react"
 import { HiArrowUturnRight } from "react-icons/hi2";
+import Button from '../ui/Button'
 
 
 const features = [
@@ -30,15 +30,15 @@ const features = [
 
 const Crew = () => {
   return (
-    <section className="bg-white py-16 px-4 md:px-10">
+    <section className="bg-white py-10 px-4 md:px-10">
       <div className="text-center">
-        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+        <p className="text-gold max-w-4xl mx-auto font-h3 text-md md:text-lg lg:text-xl font-semibold">
           Servicio especializado en el transporte seguro, puntual y confiable de estudiantes.
         </p>
       </div>
 
-      <div className="mt-12 flex flex-col lg:flex-row gap-12">
-
+        <h1 className="py-8 font-h3 text-xl text-dblue font-extrabold">¿Por qué elegirnos?</h1>
+      <div className="flex flex-col lg:flex-row gap-12">
         <div className="flex-1 space-y-8">
           {features.map((feature, index) => (
             <div key={index} className="flex items-start gap-4">

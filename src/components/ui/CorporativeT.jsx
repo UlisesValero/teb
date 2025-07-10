@@ -1,13 +1,15 @@
 import Button from "./Button";
-import { CheckCircle } from "lucide-react";
 import { servicesFeatures } from "../../lib/tebContent";
 import Container from "./Container";
 
 const CorporativeT = () => {
-    const serviceFeature = servicesFeatures.features;
 
     return (
-        <section className="bg-white py-25">
+        <section className="bg-white bg-no-repeat bg-cover py-25"
+        style={{
+        backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1125%26quot%3b)' fill='none'%3e%3cpath d='M 0%2c198 C 57.6%2c165.2 172.8%2c24.6 288%2c34 C 403.2%2c43.4 460.8%2c225.8 576%2c245 C 691.2%2c264.2 748.8%2c134.2 864%2c130 C 979.2%2c125.8 1036.8%2c247.8 1152%2c224 C 1267.2%2c200.2 1382.4%2c53.6 1440%2c11L1440 560L0 560z' fill='rgba(231%2c 231%2c 231%2c 1)'%3e%3c/path%3e%3cpath d='M 0%2c329 C 72%2c351.8 216%2c440.6 360%2c443 C 504%2c445.4 576%2c325 720%2c341 C 864%2c357 936%2c523 1080%2c523 C 1224%2c523 1368%2c377.4 1440%2c341L1440 560L0 560z' fill='rgba(238%2c 238%2c 238%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1125'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e")`,
+      }}
+        >
             <Container>
                 <div className="flex flex-col items-center gap-3 pb-15">
                     <h1 className="text-3xl md:text-5xl font-h1 text-center text-gold/90">
@@ -17,28 +19,6 @@ const CorporativeT = () => {
                         Optimizamos la movilidad de tus empleados con un servicio seguro, eficiente y adaptado a los requerimientos de tu empresa.
                     </p>
                 </div>
-
-                <div className="w-full pb-15">
-                    <div className="flex flex-col md:flex-row justify-center gap-5">
-                        <div className="flex flex-col gap-6 w-full md:w-1/2 items-center md:items-end md:pr-5">
-                            {serviceFeature.slice(0, 3).map((feature, i) => (
-                                <div key={i} className="flex items-center gap-3 p-6 rounded-2xl shadow-sm max-w-sm w-full">
-                                    <CheckCircle size={25} className="text-lblue shrink-0 hover:scale-110" />
-                                    <p className="text-gray-700 font-h3">{feature}</p>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="flex flex-col gap-6 w-full md:w-1/2 items-center md:items-start md:pl-5">
-                            {serviceFeature.slice(3, 6).map((feature, i) => (
-                                <div key={i + 3} className="flex items-center gap-3 p-6 rounded-2xl shadow-sm max-w-sm w-full">
-                                    <CheckCircle size={25} className="text-lblue shrink-0 hover:scale-110" />
-                                    <p className="text-gray-700 font-h3">{feature}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-
 
                 <div className="bg-gray-100 shadow-lg rounded-2xl p-5 gap-15 flex flex-col md:flex-row items-center justify-between">
                     <div className="flex flex-col items-center gap-8 md:w-1/2 text-center md:text-left">

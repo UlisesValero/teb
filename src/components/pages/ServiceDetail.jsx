@@ -31,14 +31,17 @@ const ServiceDetail = () => {
 
   return (
     <section className="bg-white">
-
-      {/* COLOCAR IMAGENES DESDE tebContent con la respectiva imagen de cada servicio */}
+      
       <div
-        className="w-full h-[200px] md:h-[300px] bg-fixed bg-top lg:bg-bottom bg-contain bg-no-repeat lg:bg-cover bg-[url('/assets/mainbg.jpg')] z-50"
+        className={`z-50 w-full h-[200px] md:h-[350px] bg-fixed bg-top lg:bg-bottom bg-contain bg-no-repeat lg:bg-cover 
+          ${servicio.id === "nacional" ? "bg-[url('/assets/teb-nacional.jpg')]" : ""}
+          ${servicio.id === "empresarial" ? "bg-[url('/assets/mainbg.jpg')]" : ""}
+          ${servicio.id === "turistico" ? "bg-[url('/assets/mainbg.jpg')]" : ""}
+          ${servicio.id === "educativo" ? "bg-[url('/assets/mainbg.jpg')]" : ""}
+          ${servicio.id === "tripulacion" ? "bg-[url('/assets/mainbg.jpg')]" : ""}`}
       >
         <div className="w-full h-full flex items-end justify-center pb-10 ">
           <h1 className=" font-bold text-white text-xl md:text-2xl lg:text-4xl gap-3">{servicio.name.toUpperCase()}</h1>
-          {/* COLOCAR TEXTOS DESDE tebContent CON EL RESPECTIVO TITULO DE CADA SERVICIO */}
         </div>
       </div>
     <PageTransition>

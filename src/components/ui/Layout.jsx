@@ -1,10 +1,8 @@
 import Hero from "../pages/Hero"
-// import { useLocation } from "react-router-dom"
 import Footer from '../pages/Footer'
 import UseAnimation from '../../hooks/UseAnimation'
 
 const Layout = ({ children }) => {
-  // const location = useLocation()
   const isHome = location.pathname === '/'
 
   return (

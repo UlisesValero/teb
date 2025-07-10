@@ -10,14 +10,14 @@ const Services = () => {
         <div className="flex flex-col gap-12 md:w-[90%] lg:w-[80%]">
           <div className="text-center flex flex-col gap-1 pb-10">
             <motion.h2
-  initial={{ opacity: 0, y: 40 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.6, ease: "easeOut" }}
-  className="text-6xl font-h3 font-bold text-dblue"
->
-  Servicios
-</motion.h2>
+              initial={{ opacity: 0.5, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="text-6xl font-h3 font-bold text-dblue"
+            >
+              Servicios
+            </motion.h2>
 
             <p className="text-gold font-p text-lg">Soluciones de movilidad adaptadas a tus necesidades</p>
           </div>
