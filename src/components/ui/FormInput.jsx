@@ -73,14 +73,14 @@ const FormInput = () => {
 
   return (
     <section className='py-50 px-2 md:px-10 w-full flex justify-center'>
-  <form ref={Form} onSubmit={handleSubmit} className='flex flex-col lg:flex-row gap-4 lg:gap-0 bg-dblue rounded-2xl shadow-2xl w-full max-w-[1000px]'>
-    <div className='lg:w-[65%] flex flex-col items-center gap-5 py-15'>
-      <h1 className='font-h3 text-2xl text-gold font-semibold text-center px-1'>
+  <form ref={Form} onSubmit={handleSubmit} className='flex flex-col lg:flex-row gap-4 h-fit lg:h-[65dvh] lg:gap-0 bg-dblue rounded-2xl shadow-2xl w-full max-w-[1000px]'>
+    <div className='lg:w-[65%] flex flex-col items-center justify-evenly gap-4 lg:gap-0 pt-3 lg:pt-0'>
+      <h1 className='font-h3 text-xl md:text-2xl text-gold font-semibold text-center px-1'>
         Contrata nuestros servicios
       </h1>
 
       {formContent.map((input) => (
-        <div key={input.id} className="w-[90%] relative">
+        <div key={input.id} className="w-[80%] relative">
           {input.type === "textarea" ? (
             <textarea
               className="peer w-full border-1 focus:border-lblue/80 transition-all text-white font-bold text-sm 

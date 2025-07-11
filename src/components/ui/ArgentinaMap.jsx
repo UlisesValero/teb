@@ -1,15 +1,8 @@
 import { CiLocationOn } from "react-icons/ci";
 import Button from '../ui/Button'
 import { HiArrowUturnRight } from "react-icons/hi2";
+import ArgentinaSvg from "./ArgentinaSvg";
 
-const destinos = [
-    { nombre: "Región Noroeste", top: "12%", left: "44%" },
-    { nombre: "Mendoza", top: "35%", left: "39%" },
-    { nombre: "Córdoba", top: "27%", left: "47%" },
-    { nombre: "Puerto Madryn", top: "62%", left: "42%" },
-    { nombre: "Glaciar Perito Moreno", top: "70%", left: "37%" },
-    { nombre: "Ushuaia", top: "85%", left: "40%" },
-];
 
 const features = [
       {
@@ -53,7 +46,7 @@ const ArgentinaMap = () => {
         </p>
       </div>
 
-      <div className="mt-12 flex flex-col lg:flex-row gap-12">
+      <div className="mt-12 w-[85%] flex flex-col lg:flex-row gap-12">
 
         <div className="flex-1 space-y-8">
             <h1 className="font-h3 text-xl text-dblue font-extrabold">Destinos habituales</h1>
@@ -67,27 +60,11 @@ const ArgentinaMap = () => {
             </div>
           ))}
           </div>
+          
+          <div className="">
+                <ArgentinaSvg/>
+          </div>
 
-                   <div className="relative w-full max-w-2xl ">
-                <img
-                    src="/assets/map.png"
-                    alt="Mapa de Argentina"
-                    className="w-full h-auto"
-                />
-
-                {destinos.map((destino, index) => (
-                    <div
-                        key={index}
-                        className="absolute group"
-                        style={{ top: destino.top, left: destino.left }}
-                    >
-                        <div className="w-4 h-4 bg-blue-600 rounded-full border-2 border-white shadow-md hover:scale-125 transition-transform duration-200" />
-                        <span className="absolute -top-6 left-1/2 -translate-x-1/2 bg-white text-gray-700 text-xs px-2 py-0.5 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
-                            {destino.nombre}
-                        </span>
-                    </div>
-                ))}
-                        </div>
             </div>
 
       <div className="flex justify-center pt-20">
@@ -104,6 +81,7 @@ const ArgentinaMap = () => {
           </Button>
         </a>
       </div>
+
     </section>
   )
 }
