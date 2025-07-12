@@ -73,8 +73,8 @@ const FormInput = () => {
 
   return (
     <section className='py-50 px-2 md:px-10 w-full flex justify-center'>
-  <form ref={Form} onSubmit={handleSubmit} className='flex flex-col lg:flex-row gap-4 h-fit lg:h-[65dvh] lg:gap-0 bg-dblue rounded-2xl shadow-2xl w-full max-w-[1000px]'>
-    <div className='lg:w-[65%] flex flex-col items-center justify-evenly gap-4 lg:gap-0 pt-3 lg:pt-0'>
+  <form ref={Form} onSubmit={handleSubmit} className='flex flex-col lg:flex-row gap-4 h-fit lg:h-[65dvh] lg:gap-0 w-full max-w-[1000px]'>
+    <div className='lg:w-3/4 flex flex-col items-center justify-evenly gap-4 lg:gap-0 pt-3 lg:pt-0'>
       <h1 className='font-h3 text-xl md:text-2xl text-gold font-semibold text-center px-1'>
         Contrata nuestros servicios
       </h1>
@@ -126,8 +126,8 @@ const FormInput = () => {
       </Button>
     </div>
 
-    <div className='lg:w-[35%] flex items-center justify-center'>
-      <img src="/assets/retatur.jpg" className='h-full object-cover' alt="Formulario Retatur" />
+    <div className='lg:w-1/4 h-1/2 my-auto rounded-full flex items-center justify-center'>
+      <img src="/assets/logoTeb.png" className='h-full rounded-2xl object-contain brightness-[2] grayscale-[1]' alt="Formulario Retatur" />
     </div>
   </form>
 </section>

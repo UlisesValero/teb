@@ -35,7 +35,7 @@ const AnimatedNumber = ({ value, duration = 2000 }) => {
     return (
         <div
             ref={ref}
-            className="text-4xl font-h3 font-bold text-white"
+            className="text-5xl font-h3 font-bold text-white"
         >
             {displayValue.toLocaleString()}
         </div>
@@ -45,7 +45,7 @@ const AnimatedNumber = ({ value, duration = 2000 }) => {
 
 export default function AnimatedNumbers() {
     return (
-        <div className="bg-dblue py-20 lg:py-30 flex justify-center">
+        <div className="bg-dblue py-20 lg:py-60  flex justify-center">
             
             <motion.div
                 initial={{ opacity: 0 }}
@@ -56,29 +56,29 @@ export default function AnimatedNumbers() {
             >
                 <div className="flex flex-col gap-2 items-center">
                     <div className="flex flex-col items-center">
-                        <MdModeOfTravel size={45} className="text-gold mb-2" />
+                        <MdModeOfTravel size={70} className="text-gold mb-7" />
                         <AnimatedNumber value={1000} duration={3200} />
                     </div>
-                    <h1 className="text-center text-lblue font-h3 text-xl">Viajes realizados</h1>
+                    <h1 className="text-center text-lblue font-h3 text-2xl">Viajes realizados</h1>
                 </div>
 
                 <div className="flex flex-col gap-2 items-center">
                     <div className="flex flex-col items-center">
-                        <LuMilestone size={45} className="text-gold mb-2" />
+                        <LuMilestone size={70} className="text-gold mb-7" />
                         <div className="flex items-center gap-1">
                             <AnimatedNumber value={50000} duration={3200} />
-                            <h1 className="text-white font-h3 text-xl">KM</h1>
+                            <h1 className="text-white font-h3 text-3xl">KM</h1>
                         </div>
                     </div>
-                    <h1 className="text-center text-lblue font-h3 text-xl">Recorridos</h1>
+                    <h1 className="text-center text-lblue font-h3 text-2xl">Recorridos</h1>
                 </div>
 
                 <div className="flex flex-col gap-2 items-center">
                     <div className="flex flex-col items-center">
-                        <MdCalendarToday size={45} className="text-gold mb-2" />
+                        <MdCalendarToday size={70} className="text-gold mb-7" />
                         <AnimatedNumber value={1995} duration={3200} />
                     </div>
-                    <h1 className="text-center text-lblue font-h3 text-xl">35 años de experiencia</h1>
+                    <h1 className="text-center text-lblue font-h3 text-2xl">35 años de experiencia</h1>
                 </div>
             </motion.div>
             

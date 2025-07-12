@@ -39,9 +39,7 @@ const App = () => {
 
 <AnimatedNumbers />
 
-<UseAnimation>
   <Buses />
-</UseAnimation>
 
 <UseAnimation>
     <Cards />
