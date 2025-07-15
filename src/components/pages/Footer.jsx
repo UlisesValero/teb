@@ -1,8 +1,8 @@
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"
+import { FaFacebookF, FaInstagram } from "react-icons/fa"
 import { heroCategories } from '../../lib/tebContent'
 import Button from '../ui/Button'
-import { TbMailForward } from "react-icons/tb";
-import { FaWhatsapp } from "react-icons/fa";
+import { TbMailForward } from "react-icons/tb"
+import { FaWhatsapp } from "react-icons/fa"
 
 
 const Footer = () => {
@@ -84,7 +84,7 @@ const Footer = () => {
         © {new Date().getFullYear()} TEB Transporte. Todos los derechos reservados.
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
