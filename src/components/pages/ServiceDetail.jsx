@@ -51,7 +51,7 @@ const ServiceDetail = () => {
           <div className="lg:w-[70%]">
             <ArgentinaMap />
           </div>
-          <div className="lg:w-[30%]">
+          <div className="hidden lg:flex lg:w-[30%]">
             <ServicesRedirect />
           </div>
         </div>
@@ -64,7 +64,7 @@ const ServiceDetail = () => {
           <div className="lg:w-[70%]">
             <Receptive />
           </div>
-          <div className="lg:w-[30%]">
+          <div className="hidden lg:flex lg:w-[30%]">
             <ServicesRedirect />
           </div>
         </div>
@@ -74,7 +74,7 @@ const ServiceDetail = () => {
           <div className="lg:w-[70%]">
             <Educational />
           </div>
-          <div className="lg:w-[30%]">
+          <div className="hidden lg:flex lg:w-[30%]">
             <ServicesRedirect />
           </div>
         </div>
@@ -84,7 +84,7 @@ const ServiceDetail = () => {
           <div className="lg:w-[70%]">
               <Crew/>
           </div>
-          <div className="lg:w-[30%]">
+          <div className="hidden lg:flex lg:w-[30%]">
             <ServicesRedirect />
           </div>
         </div>
