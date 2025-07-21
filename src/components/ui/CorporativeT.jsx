@@ -1,7 +1,7 @@
 import Button from "./Button";
-import { servicesFeatures } from "../../lib/tebContent";
+import { servicesFeatures, corporativeContent } from "../../lib/tebContent"
 import Container from "./Container"
-import { HiArrowUturnRight } from "react-icons/hi2";
+import { HiArrowUturnRight } from "react-icons/hi2"
 
 const CorporativeT = () => {
 
@@ -21,31 +21,61 @@ const CorporativeT = () => {
                     </p>
                 </div>
 
-                <div className="bg-gray-100 shadow-lg rounded-2xl p-5 gap-15 flex flex-col md:flex-row items-center justify-between">
-                    <div className="flex flex-col items-center gap-8 md:w-1/2 text-center md:text-left">
-                        <h3 className="text-2xl font-semibold text-gold/90">
-                            ¿Por qué elegirnos?
-                        </h3>
-                        <p className="text-gray-600 max-w-xl">
-                            Contamos con más de 10 años de experiencia en transporte empresarial, asegurando la puntualidad y comodidad del personal. Nuestra flota y equipo humano están preparados para acompañar el crecimiento de tu empresa.
-                        </p>
-                        <a href={window.location.pathname !== "/" ? "/#contact" : "#contact"}>
-                            <Button className="relative group px-10 py-2 border-gray-300 hover:border-gold/80 border text-xl font-p hover:text-gold/80 overflow-hidden">
+<div className="bg-gray-100 shadow-lg rounded-2xl p-5 gap-10 flex flex-col lg:flex-row items-center justify-between">
+  <div className="flex flex-col gap-6 md:w-1/2 text-left">
+    <h3 className="text-2xl font-semibold font-h3 text-gold">¿Por qué elegirnos?</h3>
 
-                                <span className="transition-opacity duration-400 ease-in-out group-hover:opacity-0">
-                                    Solicita cotizacion
-                                </span>
-                                <HiArrowUturnRight
-                                    className="absolute inset-0 m-auto opacity-0 transition-opacity duration-400 ease-in-out group-hover:opacity-100"
-                                    size={24}
-                                />
-                            </Button>
-                        </a>
-                    </div>
-                    <div className="w-full md:w-1/2 flex justify-center">
-                        <img src={servicesFeatures.image} className="w-full rounded-xl" alt="Ilustración traslado empresarial" />
-                    </div>
-                </div>
+    <div className="space-y-3 lg:text-lg font-p text-black text-sm md:text-base leading-relaxed">
+      <p>
+        En un entorno empresarial donde cada minuto cuenta, ofrecemos una solución de transporte diseñada para garantizar puntualidad, seguridad y eficiencia en el traslado diario de personal. Nos especializamos en el servicio corporativo, trabajando codo a codo con empresas de todos los rubros para cubrir recorridos urbanos e interurbanos, optimizando cada trayecto según la necesidad operativa del cliente.
+      </p>
+      <p>
+        Contamos con una flota moderna compuesta por buses de hasta 45 asientos y combis ejecutivas, adaptándonos tanto a grandes dotaciones como a grupos más reducidos. Nuestro objetivo es claro: que tus equipos lleguen a tiempo, cómodos y listos para trabajar.
+      </p>
+
+
+      <h3 className="font-semibold text-xl font-h3 text-gold mt-6">Lo que le ofrecemos a tu empresa</h3>
+      <ul className="list-disc list-inside space-y-2 lg:text-lg text-black font-p">
+        <li>
+          Reducción del ausentismo y la impuntualidad, asegurando la llegada puntual incluso en condiciones adversas.
+        </li>
+        <li>
+          Ahorro en tiempo y recursos internos, ya que asumimos la planificación, gestión y seguimiento del servicio.
+        </li>
+        <li>
+          Flexibilidad total, con la posibilidad de ajustar paradas, recorridos y horarios según la evolución operativa.
+        </li>
+        <li>
+          Atención personalizada, con un coordinador asignado exclusivamente para tu empresa.
+        </li>
+      </ul>
+
+    </div>
+
+    <div className="mt-6 flex justify-center ">
+      <a href={window.location.pathname !== "/" ? "/#contact" : "#contact"}>
+        <Button className="relative group px-10 py-2 border-gray-300 hover:border-gold/80 border text-xl font-p hover:text-gold/80 overflow-hidden">
+          <span className="transition-opacity duration-400 ease-in-out group-hover:opacity-0">
+            Solicita cotización
+          </span>
+          <HiArrowUturnRight
+            className="absolute inset-0 m-auto opacity-0 transition-opacity duration-400 ease-in-out group-hover:opacity-100"
+            size={24}
+          />
+        </Button>
+      </a>
+    </div>
+  </div>
+
+  <div className="w-full md:w-1/2 flex justify-center mt-10 md:mt-0">
+    <img
+      src={servicesFeatures.image}
+      className="w-full max-w-md md:max-w-full rounded-xl"
+      alt="Ilustración traslado empresarial"
+    />
+  </div>
+</div>
+
             </Container>
         </section>
 

@@ -109,6 +109,29 @@ export const contactContent = [
     { icon: "", title: "", description: "" }
 ]
 
+export const corporativeContent = {
+  "title": "Tu Empresa en Movimiento: Soluciones de Transporte Corporativo de Confianza",
+  "intro": "En un entorno empresarial donde cada minuto cuenta, ofrecemos una solución de transporte diseñada para garantizar puntualidad, seguridad y eficiencia en el traslado diario de personal. Nos especializamos en el servicio corporativo, trabajando codo a codo con empresas de todos los rubros para cubrir recorridos urbanos e interurbanos, optimizando cada trayecto según la necesidad operativa del cliente.\n\nContamos con una flota moderna compuesta por buses de hasta 45 asientos y combis ejecutivas, adaptándonos tanto a grandes dotaciones como a grupos más reducidos. Nuestro objetivo es claro: que tus equipos lleguen a tiempo, cómodos y listos para trabajar.",
+  "sections": {
+    "eficiencia_operativa": {
+      "title": "Eficiencia operativa",
+      "content": "Sabemos que cada empresa tiene dinámicas únicas. Por eso, diseñamos rutas personalizadas que responden a los horarios y zonas de residencia del personal. Coordinamos con los responsables de RRHH o logística para armar circuitos estratégicos que minimicen tiempos de viaje, eviten demoras y mejoren la experiencia general del traslado.\n\nAdemás, nuestra experiencia operando en múltiples industrias nos permite anticipar imprevistos, proponer soluciones flexibles y garantizar un servicio fluido, aún en contextos de alta demanda o cambios de último momento."
+    },
+    "lo_que_ofrecemos": {
+      "title": "Lo que le ofrecemos a tu empresa",
+      "items": [
+        "Reducción del ausentismo y la impuntualidad, asegurando la llegada puntual incluso en condiciones adversas.",
+        "Ahorro en tiempo y recursos internos, ya que asumimos la planificación, gestión y seguimiento del servicio.",
+        "Mejora del clima laboral, brindando al personal un viaje cómodo, seguro y profesional.",
+        "Flexibilidad total, con la posibilidad de ajustar paradas, recorridos y horarios según la evolución operativa.",
+        "Atención personalizada, con un coordinador asignado exclusivamente para tu empresa.",
+        "Seguimiento en tiempo real, gracias a vehículos equipados con GPS y protocolos de control permanente."
+      ]
+    }
+  },
+  "closing": "Elegirnos es mucho más que contratar un transporte. Es sumar un socio estratégico comprometido con el bienestar de tus equipos y con el funcionamiento eficiente de tu empresa. Estamos listos para ayudarte a avanzar. ¿Nos ponemos en marcha?"
+} 
+
 export const heroCategories = [
     { category: "Inicio", route: "hero", key: "1" },
     { category: "Servicios", route: "services", key: "2" },
@@ -116,5 +139,11 @@ export const heroCategories = [
     { category: "Contacto", route: "contact", key: "4" },
     { category: "Reta Tur", route: "retatur", key: "5" }
 ]
+
+export const crewContent = [
+            {title: "Hotel NH City", location:"CABA - Centro", logo:"/assets/nh-hotel.jpg"},
+            {title: "Hotel Sheraton Retiro", location:"CABA - Retiro", logo:"/assets/sheraton-hotel.png"},
+            {title: "Hotel Hilton", location:"Puerto Madero - CABA", logo:"/assets/hilton-hotel.png"}
+          ]
 
 
