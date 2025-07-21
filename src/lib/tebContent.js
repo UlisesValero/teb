@@ -72,31 +72,31 @@ export const servicesFeatures = {
 export const busesDetail = [
   {
     busType: "Mini Van",
-    description: "Vehículo compacto y versátil, ideal para grupos reducidos de hasta 10 pasajeros. Confort y eficiencia para traslados urbanos o cortas distancias.",
+    description: "Vehículo compacto y versátil, ideal para grupos reducidos de hasta 10 pasajeros. Confort y eficiencia para traslados urbanos o cortas distancias. Normalmente utilizado para traslados empresariales.",
     img: "/assets/Van.png",
     key: "1"
   },
   {
     busType: "Kombiwagen",
-    description: "Unidad intermedia con capacidad para 19 pasajeros. Perfecta para grupos medianos, con un equilibrio entre comodidad y movilidad.",
+    description: "Unidad intermedia con capacidad para 19 pasajeros. Perfecta para grupos medianos, con un equilibrio entre comodidad y movilidad. Ideal para viajes cortos y eventos.",
     img: "/assets/Combie.png",
     key: "2"
   },
   {
-    busType: "Bus Semi-Cama 42-45",
+    busType: "Bus Semi-Cama",
     description: "Bus climatizado con asientos semi-cama y baño a bordo. Ideal para viajes de media y larga distancia con hasta 45 pasajeros.",
     img: "/assets/Bus42p.png",
     key: "3"
   },
   {
-    busType: "Bus Semi-Cama 60",
-    description: "Bus de gran capacidad con asientos semi-cama, perfecto para trasladar hasta 60 personas con confort y seguridad.",
+    busType: "Bus Semi-Cama",
+    description: "Bus de gran capacidad con asientos semi-cama, perfecto para trasladar hasta 60 personas con confort y seguridad. Ideal para excursiones y viajes grupales.",
     img: "/assets/Bus60psemi.png",
     key: "4"
   },
   {
-    busType: "Bus Cama 60",
-    description: "Máximo confort para grupos grandes: bus con asientos cama, ideal para viajes largos de hasta 60 pasajeros.",
+    busType: "Bus Cama",
+    description: "Máximo confort para grupos grandes: bus con asientos cama, ideal para viajes largos de hasta 60 pasajeros. Equipado con todas las comodidades para un viaje placentero.",
     img: "/assets/Bus60pcama.png",
     key: "5"
   }
@@ -116,13 +116,5 @@ export const heroCategories = [
     { category: "Contacto", route: "contact", key: "4" },
     { category: "Reta Tur", route: "retatur", key: "5" }
 ]
-
-// export const images = [
-//   "/assets/Bus60pcama.png",
-//   "/assets/Bus60psemi.png",
-//   "/assets/Bus42p.png",
-//   "/assets/Combie.png",
-//   "/assets/Van.png"
-// ];
 
 

@@ -42,7 +42,7 @@ const Services = () => {
                     className={`relative flex flex-col md:flex-row ${impar ? "md:flex-row-reverse" : ""
                       } overflow-hidden cursor-pointer border border-white/10 rounded-2xl hover:scale-[1.01] transition-all duration-300`}
                   >
-                    <div className="md:w-1/2 min-h-70 max-h-90  relative">
+                    <div className="md:w-1/2 max-h-85 relative">
                       <img
                         src={service.img}
                         alt={service.alt}

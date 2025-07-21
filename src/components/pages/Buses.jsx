@@ -18,7 +18,6 @@ const Buses = () => {
 
   return (
     <section
-      {...(window.innerWidth < 768 ? sliderEvents : {})}
       id="us"
       className="relative w-full min-h-screen flex items-center justify-center  bg-dblue px-6 lg:px-20 py-50 bg-no-repeat bg-cover"
       
@@ -33,7 +32,7 @@ const Buses = () => {
           Nuestra flota
         </h2>
 
-        <div className="relative w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div className="relative w-full bg-white rounded-2xl shadow-2xl overflow-hidden px-10 md:px-0">
           <AnimatePresence custom={direction} mode="wait">
             <motion.div
               key={busesDetail[current].key}
@@ -42,6 +41,7 @@ const Buses = () => {
               initial="enter"
               animate="center"
               className="flex flex-col md:flex-row items-center "
+              {...(window.innerWidth < 768 ? sliderEvents : {})}
             >
               <img
                 src={busesDetail[current].img}
@@ -49,10 +49,10 @@ const Buses = () => {
                 className="w-full md:w-1/2 h-[250px] md:h-[450px] object-contain rounded-lg"
               />
               <div className="flex flex-col gap-3 justify-center text-center md:text-left max-w-sm pb-10">
-                <h3 className=" text-2xl md:text-4xl font-h3 font-semibold text-gold">
+                <h3 className=" text-2xl md:text-3xl font-h1 text-gold">
                   {busesDetail[current].busType}
                 </h3>
-                <p className="text-dblue text-sm md:text-md lg:text-lg font-p leading-relaxed">
+                <p className="text-dblue text-sm md:text-md lg:text-lg text-gray-700 font-p leading-relaxed">
                   {busesDetail[current].description}
                 </p>
               </div>
@@ -64,7 +64,7 @@ const Buses = () => {
               onClick={prevSlide}
               className="p-3 rounded-full border border-gray-300 bg-white shadow-md hover:bg-gold hover:text-white transition cursor-pointer"
             >
-              <ChevronLeft size={24} />
+              <ChevronLeft size={20} />
             </button>
           </div>
           <div className="absolute top-1/2 right-4 transform -translate-y-1/2 z-20">
@@ -72,12 +72,12 @@ const Buses = () => {
               onClick={nextSlide}
               className="p-3 rounded-full border border-gray-300 bg-white shadow-md hover:bg-gold hover:text-white transition cursor-pointer"
             >
-              <ChevronRight size={24} />
+              <ChevronRight size={20} />
             </button>
           </div>
         </div>
 
-        <div className="w-full pt-10 overflow-x-hidden">
+        <div className="w-[100vw] lg:w-full pt-10 overflow-x-auto lg:overflow-hidden">
           <motion.div
             key={current}
             initial={{ opacity: 0, x: 10 }}
@@ -92,7 +92,7 @@ const Buses = () => {
                 <motion.div
                   key={item.key}
                   onClick={() => !isActive && goToSlide(index)}
-                  className={`group flex flex-col justify-between py-3 px-7 min-w-[140px] max-w-[190px] rounded-lg shadow-lg cursor-pointer transition-transform duration-300
+                  className={`group flex flex-col justify-between py-3 px-7 min-w-[140px] max-w-[190px] rounded-lg shadow-md cursor-pointer transition-transform duration-300
         ${isActive ? "border-2 border-gold  pointer-events-none scale-100" : "bg-white border border-gray-200 hover:border-gold hover:shadow-md hover:scale-[1.02]"}`}
                 >
                   <motion.img
@@ -103,7 +103,7 @@ const Buses = () => {
                     layoutId={`bus-img-${item.key}`}
                   />
                   <div className="text-center">
-                    <h3 className={`font-h3 text-sm ${isActive ? "text-gold/70" : "text-gold"}`}>
+                    <h3 className={`font-h1 text-md ${isActive ? "text-gold/60" : "text-gold"}`}>
                       {item.busType}
                     </h3>
                   </div>
