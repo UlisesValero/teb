@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="w-full"
+      className="w-full py-20"
     >
       <FormInput />
     </section>

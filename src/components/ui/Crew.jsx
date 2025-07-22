@@ -45,15 +45,7 @@ const Crew = () => {
 
             <div className="flex justify-center pt-3">
               <a href={window.location.pathname !== "/" ? "/#contact" : "#contact"}>
-                <Button className="relative group px-10 py-2 border-gray-300 hover:border-gold/80 border text-xl font-p hover:text-gold/80 overflow-hidden">
-                  <span className="transition-opacity duration-400 ease-in-out group-hover:opacity-0">
-                    Solicita cotización
-                  </span>
-                  <HiArrowUturnRight
-                    className="absolute inset-0 m-auto opacity-0 transition-opacity duration-400 ease-in-out group-hover:opacity-100"
-                    size={24}
-                  />
-                </Button>
+                <Button text={"Solicitar cotización"}/>
               </a>
             </div>
           </div>

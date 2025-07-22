@@ -1,4 +1,4 @@
-export const scroll = (target, offset = 80) => {
+export const scroll = (target, offset = 90) => {
   const el = document.getElementById(target)
   if (el) {
     const y = el.getBoundingClientRect().top + window.pageYOffset - offset

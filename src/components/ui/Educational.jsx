@@ -1,34 +1,7 @@
-import { GraduationCap, Clock, ShieldCheck, FileText, Users } from "lucide-react"
 import Button from '../ui/Button'
 import { HiArrowUturnRight } from "react-icons/hi2"
 
-const features = [
-  {
-    icon: <ShieldCheck className="text-lblue" size={24} />,
-    title: "Seguridad profesional",
-    desc: "Choferes capacitados y unidades habilitadas, cumpliendo con todas las normativas."
-  },
-  {
-    icon: <Clock className="text-lblue" size={24} />,
-    title: "Puntualidad asegurada",
-    desc: "Turnos escolares cubiertos con precisión y seguimiento en tiempo real."
-  },
-  {
-    icon: <Users className="text-lblue" size={24} />,
-    title: "Comunicación constante",
-    desc: "Canales directos con las familias para brindar tranquilidad y control."
-  },
-  {
-    icon: <FileText className="text-lblue" size={24} />,
-    title: "Documentación completa",
-    desc: "Cumplimiento legal: seguros, permisos y certificados disponibles."
-  },
-  {
-    icon: <GraduationCap className="text-lblue" size={24} />,
-    title: "Atención personalizada",
-    desc: "Adaptación a las necesidades de cada alumno e institución educativa."
-  }
-]
+
 const educationalServices = [
   { title: "Excursiones", desc: "Traslados seguros y organizados para salidas escolares y educativas." },
   { title: "Visitas Guiadas", desc: "Movilidad para recorridos culturales, museos y centros de interés." },
@@ -95,19 +68,9 @@ const Educational = () => {
         </div>
       </div>
 
-
-
       <div className="flex justify-center pt-20">
         <a href={window.location.pathname !== "/" ? "/#contact" : "#contact"}>
-          <Button className="relative group px-10 py-2 border-gray-300 hover:border-gold/80 border text-xl font-p hover:text-gold/80 overflow-hidden">
-            <span className="transition-opacity duration-400 ease-in-out group-hover:opacity-0">
-              Solicita cotización
-            </span>
-            <HiArrowUturnRight
-              className="absolute inset-0 m-auto opacity-0 transition-opacity duration-400 ease-in-out group-hover:opacity-100"
-              size={24}
-            />
-          </Button>
+          <Button text={"Solicitar cotización"}/>
         </a>
       </div>
     </section>

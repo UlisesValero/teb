@@ -43,7 +43,7 @@ const Reta = () => {
               <div className="h-full flex flex-col justify-center items-center">
                 <div className="bg-white shadow-lg rounded-2xl p-6 gap-5 flex flex-col items-center text-center w-full max-w-xl">
 
-                  <h1 className="text-6xl font-h3 font-semibold text-gold/90">Retatur</h1>
+                  <h1 className="text-5xl font-h3 font-semibold text-gold/90">Retatur</h1>
 
                   <p className="text-gray-600 max-w-xl">
                     Contamos con más de 10 años de experiencia en transporte empresarial, asegurando la puntualidad y comodidad del personal. Nuestra flota y equipo humano están preparados para acompañar el crecimiento de tu empresa.
@@ -52,19 +52,11 @@ const Reta = () => {
                   <img
                     src="/assets/retatur.jpg"
                     alt="Ilustración traslado empresarial"
-                    className="w-full rounded-xl object-cover"
+                    className="w-[75%] rounded-xl object-cover"
                   />
 
                   <a href={window.location.pathname !== "/" ? "/#contact" : "#contact"}>
-                    <Button className="relative group px-10 py-2 border-gray-300 hover:border-gold/80 border text-xl font-p hover:text-gold/80 overflow-hidden">
-                      <span className="transition-opacity duration-400 ease-in-out group-hover:opacity-0">
-                        Solicita cotización
-                      </span>
-                      <HiArrowUturnRight
-                        className="absolute inset-0 m-auto opacity-0 transition-opacity duration-400 ease-in-out group-hover:opacity-100"
-                        size={24}
-                      />
-                    </Button>
+                    <Button text={"Solicitar cotización"}/>
                   </a>
                 </div>
               </div>

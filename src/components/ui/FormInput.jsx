@@ -115,16 +115,8 @@ const FormInput = () => {
 
     <Button
       type="submit"
-      className="relative group py-2 px-13 border border-gold rounded-xl text-lg font-h3 hover:bg-gold/10 
-                 hover:text-gold transition-all duration-400 shadow-md"
+      text={"Enviar Formulario"}
     >
-      <span className="transition-opacity duration-400 ease-in-out group-hover:opacity-0">
-        Enviar Formulario
-      </span>
-      <TbMailForward
-        className="absolute inset-0 m-auto opacity-0 transition-opacity duration-400 ease-in-out group-hover:opacity-100"
-        size={30}
-      />
     </Button>
   </div>
 
