@@ -17,13 +17,19 @@ const Footer = () => {
           <div className="flex flex-col items-start gap-2">
             {heroCategories.map(category => (
               <a
-                key={category.route}
-                href={`#${category.route}`}
+                href={category.route === "contact" || category.route === "hero" || category.route === "us" || category.route === "services" ? `/#${category.route}` : category.route}
                 className="font-p text-md text-gray-400 hover:text-white hover:text-shadow-2xs w-fit hover:scale-110 transition-all duration-400 hover:underline"
+                onClick={e => {
+                  if (category.route === "/retatur") {
+                    e.preventDefault()
+                    window.location.href = "/retatur"
+                  }
+                }}
               >
                 {category.category}
               </a>
             ))}
+
           </div>
         </div>
 
