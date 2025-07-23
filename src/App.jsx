@@ -1,17 +1,17 @@
-import Services from './components/pages/Services'
-import Contact from './components/pages/Contact'
-import Welcome from "./components/pages/Welcome";
-import Cards from "./components/ui/Cards";
-import Container from "./components/ui/Container";
-import Buses from "./components/pages/Buses";
-import { useDarkBg } from "./context/DarkBg";
+import { useDarkBg } from "./context/DarkBg"
 import { AnimatePresence, motion } from "framer-motion"
 import { useLocation } from 'react-router-dom'
-import { useEffect } from 'react';
-import { scroll } from './lib/utils';
-import UseAnimation from './hooks/UseAnimation';
-import AnimatedNumbers from './components/ui/AnimatedNumbers';
-import Reta from './components/pages/Reta';
+import { useEffect } from 'react'
+import { scroll } from './lib/utils'
+import Services from './components/pages/Services'
+import Contact from './components/pages/Contact'
+import Welcome from "./components/pages/Welcome"
+import Cards from "./components/ui/Cards"
+import Container from "./components/ui/Container"
+import Buses from "./components/pages/Buses"
+import UseAnimation from './hooks/UseAnimation'
+import AnimatedNumbers from './components/ui/AnimatedNumbers'
+import Reta from './components/pages/Reta'
 
 const App = () => {
   const { darken } = useDarkBg()
@@ -29,7 +29,6 @@ const App = () => {
       scroll(sectionId)
     }
   })
-
   }, [location.hash])
 
   return (
@@ -56,7 +55,7 @@ const App = () => {
 </UseAnimation>
 
 <UseAnimation>
-  {window.location === "/retatur" || window.location === "/servicio/" ? <Reta/> : null}
+  {window.location === "/servicio/" ? <Reta/> : null}
 </UseAnimation>
 
     <AnimatePresence>

@@ -19,17 +19,17 @@ const ServiceRedirect = () => {
           <Link
             key={service.key}
             to={`/servicio/${service.id}`}
-            className={`pb-1 border-b border-gray-300 flex items-center justify-between group text-dblue text-xl
+            className={`pb-1 border-b border-gray-300 gap-3 flex items-center justify-between group text-dblue
                 hover:text-dblue/80 hover:font-semibold hover:brightness-110 hover:bg-gray-300/50 hover:scale-[1.02] transition-all duration-300
-                ${isActive ? "text-dblue/80 font-semibold brightness-110 bg-gray-300/50 scale-[1.02]" : ""}
+                ${isActive ? "text-dblue/80 font-semibold brightness-110 bg-gray-300/80 scale-[1.02]" : ""}
               `}
           >
             <div className="flex items-center gap-3">
-              <Icon className="text-gold/80 text-xl md:text-2xl lg:text-4xl" />
-              <span>{service.name}</span>
+              <Icon className="text-dblue text-xl md:text-2xl lg:text-4xl" />
+              <h3 className={`font-h3 ${isActive ? "font-bold" : null}`}>{service.name}</h3>
             </div>
 
-            <BsArrowUpRight className={`transform transition-all duration-600 ${isActive ? "rotate-45" : ""} group-hover:rotate-45`} />
+            <BsArrowUpRight className={`transform transition-all duration-600 text-sm ${isActive ? "rotate-45" : ""} group-hover:rotate-45`} />
           </Link>
         )
       })}

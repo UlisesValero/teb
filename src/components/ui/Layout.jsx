@@ -8,11 +8,11 @@ const Layout = ({ children }) => {
   return (
     <>
       {isHome ? (
-        <div className="bg-[url('/assets/mainbg.jpg')] bg-cover bg-fixed bg-center h-[100dvh]">
+        <div className="bg-[url('/assets/mainbg.jpg')] bg-cover bg-center min-h-screen md:bg-fixed">
           <UseAnimation>
-          <Hero />
-          {children}
-          <Footer />
+            <Hero />
+            {children}
+            <Footer />
           </UseAnimation>
         </div>
       ) : (

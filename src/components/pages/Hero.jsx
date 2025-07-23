@@ -1,11 +1,11 @@
-import { BsArrowUpRight } from "react-icons/bs";
-import Burger from "../ui/Burger"
+import { BsArrowUpRight } from "react-icons/bs"
 import { useState } from 'react'
-import { MdArrowRight } from "react-icons/md";
-import { servicesList, heroCategories } from "../../lib/tebContent";
-import useScroll from "../../hooks/useScroll";
-import { useDarkBg } from "../../context/DarkBg";
-import Container from "../ui/Container";
+import { MdArrowRight } from "react-icons/md"
+import { servicesList, heroCategories } from "../../lib/tebContent"
+import { useDarkBg } from "../../context/DarkBg"
+import Burger from "../ui/Burger"
+import useScroll from "../../hooks/useScroll"
+import Container from "../ui/Container"
 
 const Hero = () => {
     const { setDarken } = useDarkBg()
@@ -27,9 +27,11 @@ const Hero = () => {
 
                         </a>
                         </div>
+                        
                         <div className="md:hidden">
                             <Burger />
                         </div>
+                        
                         <div className="flex gap-15 h-full">
                         {heroCategories.map((category, index) => (
                             category.category === "Servicios" ? (
@@ -73,9 +75,15 @@ const Hero = () => {
                                 </div>
                             ) : (
                                 <a
-                                href={category.route == "contact" || category.route === "hero" || category.route === "us" ? `/#${category.route}` : category.route } 
-                                key={index} 
-                                className="font-h1 text-gray-200 hover:text-gold hover:scale-105 transition-all duration-300 text-xs md:text-lg lg:text-2xl hidden md:flex md:items-center md:h-full" 
+                                href={category.route === "contact" || category.route === "hero" || category.route === "us" ? `/#${category.route}` : category.route}
+                                key={index}
+                                className="font-h1 text-gray-200 hover:text-gold hover:scale-105 transition-all duration-300 text-xs md:text-lg lg:text-2xl hidden md:flex md:items-center md:h-full"
+                                onClick={e => {
+                                    if (category.route === "/retatur") {
+                                      e.preventDefault()
+                                      window.location.href = "/retatur"
+                                    }
+                                  }}
                                 >    
                                 {category.category}
                                 </a>

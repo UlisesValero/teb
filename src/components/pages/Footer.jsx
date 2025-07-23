@@ -1,7 +1,6 @@
 import { FaFacebookF, FaInstagram } from "react-icons/fa"
 import { heroCategories } from '../../lib/tebContent'
 import Button from '../ui/Button'
-import { TbMailForward } from "react-icons/tb"
 import { FaWhatsapp } from "react-icons/fa"
 
 
