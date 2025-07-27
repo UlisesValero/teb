@@ -1,14 +1,14 @@
-import { useState } from "react";
-import { heroCategories, servicesList } from '../../lib/tebContent';
-import { Menu } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import { IoCloseOutline } from "react-icons/io5";
-import { MdArrowRight } from "react-icons/md";
-import { useDarkBg } from "../../context/DarkBg";
+import { useState } from "react"
+import { heroCategories, servicesList } from '../../lib/tebContent'
+import { Menu } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+import { IoCloseOutline } from "react-icons/io5"
+import { MdArrowRight } from "react-icons/md"
+import { useDarkBg } from "../../context/DarkBg"
 
 const Burger = () => {
-    const [open, setOpen] = useState(false);
-    const [openService, setOpenService] = useState(false);
+    const [open, setOpen] = useState(false)
+    const [openService, setOpenService] = useState(false)
     const { setDarken } = useDarkBg()
 
 
@@ -91,7 +91,7 @@ const Burger = () => {
                 )}
             </AnimatePresence>
         </div>
-    );
-};
+    )
+}
 
-export default Burger;
+export default Burger

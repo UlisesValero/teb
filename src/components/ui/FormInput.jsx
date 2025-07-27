@@ -15,7 +15,7 @@ const FormInput = () => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }));
+    }))
   }
 
   const handleSubmit = async (e) => {
@@ -36,13 +36,13 @@ const FormInput = () => {
           padding: "15px 25px",
           minWidth: "300px",
         },
-      }).showToast();
+      }).showToast()
       setFormData({
         fullName: "",
         email: "",
         phone: "",
         message: "",
-      });
+      })
     } catch (error) {
       Toastify({
         text: "Ocurrió un error, intentalo de nuevo",
@@ -58,7 +58,7 @@ const FormInput = () => {
           padding: "15px 25px",
           minWidth: "300px",
         },
-      }).showToast();
+      }).showToast()
     }
   }
 

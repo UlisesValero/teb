@@ -15,10 +15,10 @@ const Button = ({ text, children, className = "" }) => {
       />
       {children}
     </button>
-  );
-};
+  )
+}
 
 
 
 
-export default Button;
+export default Button

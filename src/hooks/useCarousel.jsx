@@ -7,14 +7,14 @@ const useCarousel = () => {
   const [direction, setDirection] = useState(0)
 
   const nextSlide = () => {
-    setDirection(-1);
+    setDirection(-1)
     setCurrent((prev) => (prev + 1) % total)
-  };
+  }
 
   const prevSlide = () => {
     setDirection(1)
     setCurrent((prev) => (prev - 1 + total) % total)
-  };
+  }
 
 
   const goToSlide = (targetIndex) => {
@@ -49,9 +49,9 @@ const useCarousel = () => {
       opacity: 0,
       transition: { duration: 0.4 }
     })
-  };
+  }
 
-  const getIndex = (offset) => (current + offset + total) % total;
+  const getIndex = (offset) => (current + offset + total) % total
 
   return { nextSlide, prevSlide, getIndex, goToSlide, direction, busesDetail, current, variants }
 }

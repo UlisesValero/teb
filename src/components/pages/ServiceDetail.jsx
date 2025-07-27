@@ -3,8 +3,8 @@ import { useParams, useLocation } from "react-router-dom"
 import { AnimatePresence, motion } from "framer-motion"
 import { useDarkBg } from "../../context/DarkBg"
 import { useEffect } from "react"
-import { PiWarningLight } from "react-icons/pi";
-import ArgentinaMap from "../ui/ArgentinaMap"
+import { PiWarningLight } from "react-icons/pi"
+import National from "../ui/National"
 import CorporativeT from "../ui/CorporativeT"
 import Receptive from "../ui/Receptive"
 import ServicesRedirect from "../ui/ServicesRedirect"
@@ -17,12 +17,12 @@ import Button from "../ui/Button"
 const ServiceDetail = () => {
   const { id } = useParams()
   const servicio = servicesList.find((s) => s.id === id)
-  const location = useLocation();
+  const location = useLocation()
   const { darken } = useDarkBg()
 
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" })
   }, [location.pathname])
 
   if (!servicio)
@@ -55,7 +55,7 @@ const ServiceDetail = () => {
         {servicio.id === "nacional" ? (
           <div className="flex flex-col lg:flex-row items-center lg:items-start">
             <div className="lg:w-[70%]">
-              <ArgentinaMap />
+              <National />
             </div>
             <div className="hidden lg:flex lg:w-[30%]">
               <ServicesRedirect />

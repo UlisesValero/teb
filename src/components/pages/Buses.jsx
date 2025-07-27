@@ -86,7 +86,7 @@ const Buses = () => {
             className="flex gap-4 justify-start md:justify-center min-w-max pb-2"
           >
             {busesDetail.map((item, index) => {
-              const isActive = index === current;
+              const isActive = index === current
 
               return (
                 <motion.div
@@ -108,7 +108,7 @@ const Buses = () => {
                     </h3>
                   </div>
                 </motion.div>
-              );
+              )
             })}
           </motion.div>
         </div>

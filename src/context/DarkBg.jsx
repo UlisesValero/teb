@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from "react"
 
 const DarkBg = createContext()
 
@@ -12,5 +12,5 @@ const DarkBgProvider = ( {children} ) => {
     )
 }
 
-export const useDarkBg = () => useContext(DarkBg);
-export default DarkBgProvider;
+export const useDarkBg = () => useContext(DarkBg)
+export default DarkBgProvider

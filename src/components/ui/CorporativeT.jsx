@@ -1,7 +1,6 @@
-import Button from "./Button";
-import { servicesFeatures, corporativeContent } from "../../lib/tebContent"
+import Button from "./Button"
+import { servicesFeatures } from "../../lib/tebContent"
 import Container from "./Container"
-import { HiArrowUturnRight } from "react-icons/hi2"
 
 const CorporativeT = () => {
 
