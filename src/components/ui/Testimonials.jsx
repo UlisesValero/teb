@@ -28,7 +28,7 @@ const Testimonials = () => {
   return (
     <section className="w-full flex flex-col pt-50 pb-30 bg-gradient-to-t from-dblue to-dblue2 px-6 md:px-0">
         <div className="w-full flex justify-center ">
-        <h1 className="w-[78%] pb-20 font-h3 text-4xl text-white">Experiencia TEB</h1>
+        <h1 className="md:w-[78%] pb-15 md:pb-20 text-2xl md:text-4xl font-bold text-gold font-h2">Experiencia TEB</h1>
         </div>
       <div className="flex flex-wrap justify-center gap-10">
         {testimonials.map((t, i) => (
@@ -38,7 +38,7 @@ const Testimonials = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: i * 0.1 }}
-            className="hover:scale-105 hover:shadow-md hover:shadow-lblue relative bg-white rounded-2xl shadow-md p-8 flex flex-col justify-between min-h-[320px] hover:shadow-lg transition-all duration-300 w-full sm:w-[48%] lg:w-[18%]"
+            className="group hover:scale-105 hover:shadow-md hover:shadow-lblue relative bg-white rounded-2xl shadow-md p-8 flex flex-col justify-between min-h-[320px] transition-all duration-300 w-full sm:w-[48%] lg:w-[18%]"
           >
 
             <div className="absolute top-1 right-1 text-dblue text-2xl">
@@ -52,7 +52,7 @@ const Testimonials = () => {
             <div className="mt-auto">
               <h3 className="font-bold text-dblue text-lg">{t.name}</h3>
               <p className="text-sm text-gray-500 mb-2">{t.company}</p>
-              <div className="flex gap-1 text-lblue">
+              <div className="flex gap-1 group-hover:text-lblue text-gold">
                 {Array.from({ length: 5 }).map((_, idx) => (
                   <span key={idx}>★</span>
                 ))}

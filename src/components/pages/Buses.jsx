@@ -28,7 +28,7 @@ const Buses = () => {
     >
       <UseAnimation>
       <div className="w-full max-w-6xl relative flex flex-col items-center justify-center">
-        <h2 className="font-h3 text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center pb-16">
+        <h2 className="font-h2 text-4xl font-semibold text-gold text-center pb-16">
           Nuestra flota
         </h2>
 
@@ -48,8 +48,8 @@ const Buses = () => {
                 alt={busesDetail[current].busType}
                 className="w-full md:w-1/2 h-[250px] md:h-[450px] object-contain rounded-lg"
               />
-              <div className="flex flex-col gap-3 justify-center text-center md:text-left max-w-sm pb-10">
-                <h3 className=" text-2xl md:text-3xl font-h1 text-gold">
+              <div className="flex flex-col gap-3 justify-center text-center  max-w-sm pb-10">
+                <h3 className=" text-2xl md:text-3xl font-h2 font-semibold text-gold">
                   {busesDetail[current].busType}
                 </h3>
                 <p className="text-dblue text-sm md:text-md lg:text-lg font-p leading-relaxed">
@@ -103,7 +103,7 @@ const Buses = () => {
                     layoutId={`bus-img-${item.key}`}
                   />
                   <div className="text-center">
-                    <h3 className={`font-h1 text-md ${isActive ? "text-gold" : "text-gray-700 group-hover:text-gold"}`}>
+                    <h3 className={`font-h2 text-sm ${isActive ? "text-gold" : "text-gray-700 group-hover:text-gold"}`}>
                       {item.busType}
                     </h3>
                   </div>

@@ -83,13 +83,13 @@ export const busesDetail = [
     key: "2"
   },
   {
-    busType: "Bus Semi-Cama",
+    busType: "Semi-Cama",
     description: "Bus climatizado con asientos semi-cama y baño a bordo. Ideal para viajes de media y larga distancia con hasta 45 pasajeros.",
     img: "/assets/Bus42p.png",
     key: "3"
   },
   {
-    busType: "Bus Semi-Cama",
+    busType: "Semi-Cama",
     description: "Bus de gran capacidad con asientos semi-cama, perfecto para trasladar hasta 60 personas con confort y seguridad. Ideal para excursiones y viajes grupales.",
     img: "/assets/Bus60psemi.png",
     key: "4"

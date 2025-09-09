@@ -3,7 +3,6 @@ import useFormInput from "../../hooks/useFormInput"
 import { useRef } from 'react'
 import Toastify from 'toastify-js'
 import Button from '../ui/Button'
-import { TbBrandWhatsapp, TbMailForward } from 'react-icons/tb'
 import { FaWhatsapp } from 'react-icons/fa'
 
 const FormInput = () => {
@@ -71,8 +70,7 @@ const FormInput = () => {
              flex flex-col lg:flex-row gap-4 h-fit lg:h-[65dvh] lg:gap-0 w-full max-w-[1000px]
              rounded-2xl overflow-hidden"
 >
-  {/* Formulario principal */}
-  <div className="lg:w-2/3 flex flex-col items-center justify-evenly gap-4 lg:gap-0 pt-6 pb-4 lg:pt-0">
+  <div className="lg:w-2/3 flex flex-col items-center justify-evenly gap-4 lg:gap-3 pt-6 pb-4 lg:pt-0">
     <h1 className="font-h3 text-xl md:text-2xl text-gold font-semibold text-center px-1 border-b border-gold/30 pb-2">
       Contrata nuestros servicios
     </h1>
