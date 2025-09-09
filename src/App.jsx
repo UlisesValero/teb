@@ -6,7 +6,7 @@ import { scroll } from './lib/utils'
 import Services from './components/pages/Services'
 import Contact from './components/pages/Contact'
 import Welcome from "./components/pages/Welcome"
-import Cards from "./components/ui/Cards"
+import Testimonials from "./components/ui/Testimonials"
 import Container from "./components/ui/Container"
 import Buses from "./components/pages/Buses"
 import UseAnimation from './hooks/UseAnimation'
@@ -41,14 +41,14 @@ const App = () => {
 
 <AnimatedNumbers />
 
-  <Buses />
+  <Services />
 
 <UseAnimation>
-    <Cards />
+    <Testimonials />
 
 </UseAnimation>
 
-  <Services />
+  <Buses />
 
 <UseAnimation>
   <Contact />
