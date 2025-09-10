@@ -16,9 +16,9 @@ const Hero = () => {
     return (
         <Container isNav={true}>
             <header id="hero" className=" w-full flex justify-center z-[60] relative pt-7">
-                <section
-                    className={`h-fit border-b border-gold w-fit
-                ${scrollY > 150 || location.pathname !== "/" ?  "h-20 bg-dblue border-none fixed left-0 top-0 w-full z-40 transition-all duration-500" : ""}`}
+                <section 
+                    className={`h-fit border-b border-gold w-fit 
+                ${scrollY > 150 || location.pathname !== "/" ?  "h-20 bg-dblue border-none fixed left-0 top-0 w-full z-40 transition-all duration-200" : ""}`}
                 >
                     <div className={`${scrollY > 150 || location.pathname !== "/" ? "flex flex-row items-center justify-evenly w-full gap- h-18" : "flex md:flex-col gap-8 pb-2 md:pb-0 "}`}>
                         <div className={`${scrollY > 150 || location.pathname !== "/" ? "" : "w-full flex justify-center"}`}>

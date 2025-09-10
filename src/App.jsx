@@ -12,6 +12,7 @@ import Buses from "./components/pages/Buses"
 import UseAnimation from './hooks/UseAnimation'
 import AnimatedNumbers from './components/ui/AnimatedNumbers'
 import Reta from './components/pages/Reta'
+import Spinner from "./components/ui/Spinner"
 
 const App = () => {
   const { darken } = useDarkBg()
