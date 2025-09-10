@@ -13,6 +13,7 @@
     --font-h3: "Merriweather", serif;
     --font-p: "Source Serif 4", serif;
     --font-h2: "Libre Baskerville", serif;
+    --breakpoint-service: 950px;
 }
 
 .text-stroke-white {
