@@ -1,4 +1,4 @@
-import Container from "../ui/Container"
+import Container from "../layout/Container"
 import Itineraries from "../ui/Itineraries"
 import Button from "../ui/Button"
 import UseAnimation from "../../hooks/UseAnimation"

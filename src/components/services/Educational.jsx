@@ -54,7 +54,7 @@ const Educational = () => {
       <div className="pt-12 flex flex-col lg:flex-row items-center gap-12 md:p-6 bg-gray-100 shadow-md rounded-md">
         <div className="md:w-1/2 max-w-3xl px-3">
           <h3 className="font-h3 text-gold font-semibold text-3xl text-center pb-3">¿Porque elegirnos?</h3>
-          <p className="text-gray-800 text-lg leading-relaxed">
+          <p className="text-gray-800 text-md leading-relaxed">
             En nuestra empresa garantizamos <strong className="font-semibold text-black">seguridad profesional</strong> mediante choferes capacitados y unidades habilitadas que cumplen estrictamente con todas las normativas vigentes. Ofrecemos <strong className="font-semibold text-black">puntualidad asegurada</strong>, cubriendo los turnos escolares con precisión y seguimiento en tiempo real para brindar un servicio confiable. Mantenemos una <strong className="font-semibold text-black">comunicación constante</strong> a través de canales directos con las familias, proporcionando tranquilidad y control durante todo el traslado. Contamos con <strong className="font-semibold text-black">documentación completa</strong>, cumpliendo con todos los requisitos legales, incluyendo seguros, permisos y certificados disponibles para su consulta. Finalmente, brindamos una <strong className="font-semibold text-black">atención personalizada</strong> que se adapta a las necesidades específicas de cada alumno e institución educativa, asegurando un servicio de calidad y compromiso.
           </p>
         </div>

@@ -1,4 +1,4 @@
-import Container from "./Container"
+import Container from "../layout/Container"
 
 const agencies = [
   { localidad: "Reta", agencia: "Diferente", direccion: "Calle 25 entre 48 y 50", telefono: "(15) 4192-3610" },

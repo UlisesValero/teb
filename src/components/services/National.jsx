@@ -1,7 +1,7 @@
 import { CiLocationOn } from "react-icons/ci"
 import Button from '../ui/Button'
 import { motion } from "framer-motion"
-import ArgentinaSvg from "./ArgentinaSvg"
+import ArgentinaSvg from "../ui/ArgentinaSvg"
 
 const features = [
   {

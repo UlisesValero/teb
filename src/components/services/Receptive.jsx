@@ -1,6 +1,6 @@
 import Masonry from "react-masonry-css"
-import Container from "./Container"
-import Button from "./Button"
+import Container from "../layout/Container"
+import Button from "../ui/Button"
 import {
   ShieldCheck,
   Clock,

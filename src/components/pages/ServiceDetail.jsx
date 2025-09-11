@@ -4,15 +4,15 @@ import { AnimatePresence, motion } from "framer-motion"
 import { useDarkBg } from "../../context/DarkBg"
 import { useEffect } from "react"
 import { PiWarningLight } from "react-icons/pi"
-import National from "../ui/National"
-import CorporativeT from "../ui/CorporativeT"
-import Receptive from "../ui/Receptive"
-import ServicesRedirect from "../ui/ServicesRedirect"
-import Educational from "../ui/Educational"
-import Crew from "../ui/Crew"
+import National from '../services/National'
+import CorporativeT from '../services/CorporativeT'
+import Crew from '../services/Crew'
+import Receptive from '../services/Receptive'
+import Educational from '../services/Educational'
 import UseAnimation from "../../hooks/UseAnimation"
 import PageTransition from "../../hooks/PageTransition"
 import Button from "../ui/Button"
+import ServicesRedirect from '../ui/ServicesRedirect'
 
 const ServiceDetail = () => {
   const { id } = useParams()
@@ -53,7 +53,7 @@ const ServiceDetail = () => {
       <PageTransition>
 
         {servicio.id === "nacional" ? (
-          <div className="flex flex-col lg:flex-row items-center lg:items-start">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start lg:px-50">
             <div className="lg:w-[70%]">
               <National />
             </div>
@@ -66,7 +66,7 @@ const ServiceDetail = () => {
           <UseAnimation><CorporativeT /></UseAnimation>
         ) : null}
         {servicio.id === "turistico" ? (
-          <div className="flex flex-col lg:flex-row items-center lg:items-start">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start lg:px-50">
             <div className="lg:w-[70%]">
               <Receptive />
             </div>
@@ -76,7 +76,7 @@ const ServiceDetail = () => {
           </div>
         ) : null}
         {servicio.id === "educativo" ? (
-          <div className="w-full flex flex-col lg:flex-row items-center lg:items-start">
+          <div className="w-full flex flex-col lg:flex-row items-center lg:items-start lg:px-50">
             <div className="lg:w-[70%]">
               <Educational />
             </div>
@@ -86,7 +86,7 @@ const ServiceDetail = () => {
           </div>
         ) : null}
         {servicio.id === "tripulacion" ? (
-          <div className="w-full flex flex-col items-center lg:items-start lg:flex-row">
+          <div className="w-full flex flex-col items-center lg:items-start lg:flex-row lg:px-50">
             <div className="lg:w-[70%]">
               <Crew />
             </div>

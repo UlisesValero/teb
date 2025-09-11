@@ -1,6 +1,6 @@
-import Button from "./Button"
+import Button from "../ui/Button"
 import { servicesFeatures } from "../../lib/tebContent"
-import Container from "./Container"
+import Container from "../layout/Container"
 
 const CorporativeT = () => {
 

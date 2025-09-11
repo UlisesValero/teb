@@ -26,7 +26,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="w-full flex flex-col pt-50 pb-30 bg-gradient-to-t from-dblue to-dblue2 px-6 md:px-0">
+    <section className="w-full flex flex-col py-50 bg-dblue px-6 md:px-0">
         <div className="w-full flex justify-center ">
         <h1 className="md:w-[78%] pb-15 md:pb-20 text-2xl md:text-4xl font-bold text-gold font-h2">Experiencia TEB</h1>
         </div>

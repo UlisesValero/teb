@@ -6,13 +6,12 @@ import { scroll } from './lib/utils'
 import Services from './components/pages/Services'
 import Contact from './components/pages/Contact'
 import Welcome from "./components/pages/Welcome"
-import Testimonials from "./components/ui/Testimonials"
-import Container from "./components/ui/Container"
+import Testimonials from "./components/pages/Testimonials"
+import Container from "./components/layout/Container"
 import Buses from "./components/pages/Buses"
 import UseAnimation from './hooks/UseAnimation'
-import AnimatedNumbers from './components/ui/AnimatedNumbers'
+import AnimatedNumbers from './components/pages/AnimatedNumbers'
 import Reta from './components/pages/Reta'
-import Spinner from "./components/ui/Spinner"
 
 const App = () => {
   const { darken } = useDarkBg()
@@ -46,7 +45,6 @@ const App = () => {
 
 <UseAnimation>
     <Testimonials />
-
 </UseAnimation>
 
   <Buses />

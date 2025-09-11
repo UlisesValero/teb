@@ -20,9 +20,10 @@ const Welcome = () => {
           Más de 35 años trasladando personas
         </h2>
 
-            <a href={window.location.pathname !== "/" ? "/#contact" : "#contact"}>
+            <a className='hidden md:flex' href={window.location.pathname !== "/" ? "/#contact" : "#contact"}>
               <Button text={"Contrata nuestros servicios"} />
-            </a>      </div>
+            </a>      
+            </div>
     </div>
 
   )

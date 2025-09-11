@@ -8,34 +8,44 @@ const ServiceRedirect = () => {
     : null
 
   return (
+    <div className="px-6 py-8">
+      <div className="bg-white shadow-xl rounded-2xl p-6 flex flex-col gap-3 border border-gray-200">
+        {servicesList.map((service) => {
+          const Icon = service.icon
+          const isActive = service.id === currentId
+          return (
+            <Link
+              key={service.key}
+              to={`/servicio/${service.id}`}
+              className={`group flex items-center justify-between rounded-xl px-4 py-3 transition-all duration-300 
+                ${
+                  isActive
+                    ? "bg-dblue text-white shadow-md scale-[1.02]"
+                    : "text-dblue hover:bg-lblue/20 hover:text-dblue/80"
+                }`}
+            >
+              <div className="flex items-center gap-3">
+                <Icon
+                  className={`text-xl md:text-2xl lg:text-3xl transition-colors 
+                    ${isActive ? "text-gold" : "text-dblue group-hover:text-gold"}`}
+                />
+                <h3
+                  className={`font-h3 text-base md:text-lg transition-colors pr-3
+                    ${isActive ? "font-bold text-white" : "text-dblue group-hover:text-dblue/90"}`}
+                >
+                  {service.name}
+                </h3>
+              </div>
 
-    <div className="px-10 py-10">
-        <div className="bg-white drop-shadow-2xl rounded-xl p-5 flex flex-col gap-4">
-      {servicesList.map((service) => {
-        const Icon = service.icon
-        const isActive = service.id === currentId
-        return (
-            
-          <Link
-            key={service.key}
-            to={`/servicio/${service.id}`}
-            className={`pb-1 border-b border-gray-300 gap-3 flex items-center justify-between group text-dblue
-                hover:text-dblue/80 hover:font-semibold hover:brightness-110 hover:bg-gray-300/50 hover:scale-[1.02] transition-all duration-300
-                ${isActive ? "text-dblue/80 font-semibold brightness-110 bg-gray-300/80 scale-[1.02]" : ""}
-              `}
-          >
-            <div className="flex items-center gap-3">
-              <Icon className="text-dblue text-xl md:text-2xl lg:text-4xl" />
-              <h3 className={`font-h3 ${isActive ? "font-bold" : null}`}>{service.name}</h3>
-            </div>
-
-            <BsArrowUpRight className={`transform transition-all duration-600 text-sm ${isActive ? "rotate-45" : ""} group-hover:rotate-45`} />
-          </Link>
-        )
-      })}
+              <BsArrowUpRight
+                className={`text-sm transition-transform duration-500 
+                  ${isActive ? "rotate-45 text-gold" : "group-hover:rotate-45 group-hover:text-gold"}`}
+              />
+            </Link>
+          )
+        })}
       </div>
     </div>
-
   )
 }
 
