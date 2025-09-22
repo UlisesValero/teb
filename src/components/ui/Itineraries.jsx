@@ -2,16 +2,11 @@ import Container from "../layout/Container"
 
 const agencies = [
   { localidad: "Reta", agencia: "Diferente", direccion: "Calle 25 entre 48 y 50", telefono: "(15) 4192-3610" },
-  { localidad: "Tres Arroyos", agencia: "Terminal De Omnibus, Boletería 8", direccion: "San Martín 1045 – Tres Arroyos", telefono: "+54 9 2983 40-4168" },
   { localidad: "Saavedra", agencia: "Puente Saavedra", direccion: "Zufriategui 1512 – Vte. Lopez", telefono: "4796-4241" },
-  { localidad: "San Martín", agencia: "Boertur", direccion: "Belgrano 3812 – San Martín", telefono: "4753-1175" },
-  { localidad: "Caseros", agencia: "Anuncio Viajes", direccion: "3 de Febrero 2718, local 7 – Caseros", telefono: "4716-0374" },
-  { localidad: "Liniers", agencia: "Terminal De Omnibus, Boleterías 11, 21, 22, 23 y 27", direccion: "Av. Gral Paz 10868 – Liniers (C.A.B.A.)", telefono: "4644-2602 / 2707 / 7367 / 3633" },
-  { localidad: "Ramos Mejía", agencia: "Calvin Tour", direccion: "Av. Rivadavia 13720 – Ramos Mejía", telefono: "4656-4003" },
-  { localidad: "Haedo", agencia: "Calvin Tour", direccion: "Av. Rivadavia 15980 – Haedo", telefono: "4443-6007 / 3003" },
   { localidad: "Morón", agencia: "N y C Travel", direccion: "Av. Rivadavia 17999 – Morón", telefono: "4627-7794" },
-  { localidad: "San Justo", agencia: "Terminal Nora", direccion: "Monseñor Bufano 3352 – San Justo", telefono: "4484-5002" },
   { localidad: "San Justo", agencia: "Bru Bus", direccion: "Av. Arturo Illia 2582 – San Justo Centro", telefono: "4484-3610" },
+  { localidad: "San Justo", agencia: "Bru Bus Rotonda", direccion: "Monseñor Bufano 3457 – San Justo Centro", telefono: "1166543555" },
+  { localidad: "San Martín", agencia: "Billinghust", direccion: "Avellaneda 3180 – Billinghust", telefono: "1166543555" }
 ]
 
 const Itineraries = () => {

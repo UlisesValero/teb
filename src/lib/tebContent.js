@@ -77,7 +77,7 @@ export const busesDetail = [
     key: "1"
   },
   {
-    busType: "Kombiwagen",
+    busType: "Kombie",
     description: "Unidad intermedia con capacidad para 19 pasajeros. Perfecta para grupos medianos, con un equilibrio entre comodidad y movilidad. Ideal para viajes cortos y eventos.",
     img: "/assets/Combie.png",
     key: "2"

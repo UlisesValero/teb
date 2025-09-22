@@ -119,19 +119,31 @@ const FormInput = () => {
   </div>
 
 
-  <div className="lg:w-1/3 flex items-center justify-center p-4">
-    <div className="flex flex-col items-center text-white/90 space-y-4 text-center">
-      <img
-        src="/assets/QR.png"
-        alt="QR WhatsApp"
-        className="h-55 rounded-lg shadow-md border-white border-2 transition-transform hover:scale-105"
-      />
-      <p className="text-sm text-white/70 flex flex-col items-center gap-2">
-        Escaneá y escribinos directo por WhatsApp
-            <FaWhatsapp size={30} color='green' className='hover:scale-110 transition-transform' />
+<div className="lg:w-1/3 flex items-center justify-center p-6">
+  <div className="flex flex-col items-center text-white/90 text-center space-y-3">
+    <h4 className="text-gold font-h3 text-xl tracking-wide">
+      HORARIOS DE ATENCIÓN
+    </h4>
+    <p className="text-lg">09:00 hs a 19:30 hs</p>
+
+    <div className="flex flex-col items-center gap-2 mt-2">
+      <p className="text-sm text-white/70">
+        Contactanos directamente a nuestro número telefónico:
       </p>
+
+      <span className="text-gold font-bold text-lg">11 6654-3555</span>
+      <a 
+        href="https://wa.me/541166543555" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 text-white/80 hover:text-green-500 transition-colors"
+      >
+        <FaWhatsapp size={30} className="hover:scale-110 transition-transform" />
+        <span className="text-sm">Escribinos por WhatsApp</span>
+      </a>
     </div>
   </div>
+</div>
 </form>
 
     </section>

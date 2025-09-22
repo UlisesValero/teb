@@ -6,7 +6,6 @@ import { scroll } from './lib/utils'
 import Services from './components/pages/Services'
 import Contact from './components/pages/Contact'
 import Welcome from "./components/pages/Welcome"
-import Testimonials from "./components/pages/Testimonials"
 import Container from "./components/layout/Container"
 import Buses from "./components/pages/Buses"
 import UseAnimation from './hooks/UseAnimation'
@@ -43,9 +42,6 @@ const App = () => {
 
   <Services />
 
-<UseAnimation>
-    <Testimonials />
-</UseAnimation>
 
   <Buses />
 
