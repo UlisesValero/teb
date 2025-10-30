@@ -11,12 +11,14 @@ class FormEmail {
     const templateId = import.meta.env.VITE_TEMPLATE_KEY
 
     const formValues = {
+
       title: "Nuevo mensaje desde TEB web",
       name: formData.fullName,
       time: new Date().toLocaleString(),
       message: formData.message,
       phone:formData.phone,
       email: formData.email,
+    
     }
 
     return await emailjs.send(serviceId, templateId, formValues)

@@ -6,7 +6,19 @@ const agencies = [
   { localidad: "Morón", agencia: "N y C Travel", direccion: "Av. Rivadavia 17999 – Morón", telefono: "4627-7794" },
   { localidad: "San Justo", agencia: "Bru Bus", direccion: "Av. Arturo Illia 2582 – San Justo Centro", telefono: "4484-3610" },
   { localidad: "San Justo", agencia: "Bru Bus Rotonda", direccion: "Monseñor Bufano 3457 – San Justo Centro", telefono: "1166543555" },
-  { localidad: "San Martín", agencia: "Billinghust", direccion: "Avellaneda 3180 – Billinghust", telefono: "1166543555" }
+  { localidad: "San Martín", agencia: "Reta Tur", direccion: "Avellaneda 3180 – Billinghust", telefono: "1166543555" }
+]
+
+const stops = [
+  {hora: "21.30", parada:"Puente Saavedra", direccion:"Zufriategui 1512 – Vte. Lopez"},
+  {hora: "22.00", parada:"San Martin", direccion:"25 de Mayo esquina Gral. Paz (Carrefour)"},
+  {hora: "23.00", parada:"Morón", direccion:"Terminal de Omnibus – Av.Rivadavia 17417 – Morón"},
+  {hora: "23.50", parada:"San Justo Bru Bus", direccion:"Monseñor Bufano 3457 – San Justo"},
+  {hora: "", parada:"Ciudadela", direccion:"Av. Rivadavia 12300 "},
+  {hora: "", parada:"Ramos Mejía", direccion:"Av. Rivadavia 13764 "},
+  {hora: "", parada:"Tres Arroyos", direccion:"Av. San Martin entre Av. Almafuerte y La Rioja (Terminal de Tres Arroyos)"},
+  {hora: "", parada:"Oriente", direccion:"Av. St. María entre Alvear y Av. San Martin"},
+  {hora: "", parada:"", direccion:""},
 ]
 
 const Itineraries = () => {

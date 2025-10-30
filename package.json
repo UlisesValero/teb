@@ -23,6 +23,7 @@
     "react-masonry-css": "^1.0.16",
     "react-router-dom": "^7.6.2",
     "react-spinners": "^0.17.0",
+    "resend": "^6.3.0",
     "tailwindcss": "^4.1.7",
     "toastify-js": "^1.12.0",
     "vite-plugin-svgr": "^4.3.0"
