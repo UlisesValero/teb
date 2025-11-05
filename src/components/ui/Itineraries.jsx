@@ -23,12 +23,9 @@ const stopsBsAsReta = [
 const stopsRetaBsAs = [
   { hora: "21.45", parada: "Oriente", direccion: "Av. St. María entre Alvear y Av. San Martin" },
   { hora: "22.30", parada: "Tres Arroyos", direccion: "Av. San Martin entre Av. Almafuerte y La Rioja (Terminal de Tres Arroyos)" },
-  { hora: "05.00", parada: "San Justo Bru Bus", direccion: "Monseñor Bufano 3457 – San Justo" },
-  { hora: "05.30", parada: "Morón", direccion: "Terminal de Omnibus – Av.Rivadavia 17417 – Morón" },
-  { hora: "06.00", parada: "San Martin", direccion: "25 de Mayo esquina Gral. Paz (Carrefour)" },
-  { hora: "06.00", parada: "Ciudadela", direccion: "Av. Rivadavia 12300" },
-  { hora: "06.00", parada: "Ramos Mejía", direccion: "Av. Rivadavia 13764" },
-  { hora: "06.30", parada: "Puente Saavedra", direccion: "Zufriategui 1512 – Vte. Lopez" },
+  { hora: "19.50", parada: "S. Francisco", direccion: "Zufriategui 1512 – Vte. Lopez" },
+  { hora: "20.40", parada: "Arco", direccion: "Arco de entrada" },
+  { hora: "20.10", parada: "Diferente", direccion: "Calle 25 entre 48 y 50" }
 ]
 
 const Itineraries = () => {
@@ -36,13 +33,13 @@ const Itineraries = () => {
     <Container>
       <div className="py-20 h-full">
 
-                <div className="mt-5">
+        <div className="mt-5">
           <h2 className="w-full text-center font-h3 font-semibold text-5xl pb-10 text-dblue">
             Paradas del recorrido
           </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            
+
             <div>
               <h3 className="text-center text-3xl font-semibold text-gold pb-5">Buenos Aires → Reta</h3>
 
